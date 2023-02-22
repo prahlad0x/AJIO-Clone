@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajio Navbar</title>
+    <style>
+      /* Add your CSS here */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: #f5f5f5;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 0 30px;
+      }
+
+      .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .navbar-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-links a {
+        margin-left: 30px;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-links a:hover {
+        color: #f02e6c;
+      }
+
+      .navbar-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-icon {
+        font-size: 24px;
+        margin-left: 20px;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-icon:hover {
+        color: #f02e6c;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">Ajio</div>
+      <div class="navbar-links">
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Beauty</a>
+        <a href="#">Sports</a>
+      </div>
+      <div class="navbar-icons">
+        <i class="fa fa-search navbar-icon" aria-hidden="true"></i>
+        <i class="fa fa-shopping-bag navbar-icon" aria-hidden="true"></i>
+      </div>
+    </nav>
+  </body>
+</html>
