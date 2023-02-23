@@ -1,7 +1,4 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
+
 img {
     /* width: 100%; */
     -webkit-transition: all .8s ease-in-out;
@@ -18,7 +15,8 @@ img:hover{
     transform: scale(1.03);
 }
 
-#nav{
+/* -------------------------------------   nav --------------------------------------- */
+/* #nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -72,7 +70,57 @@ img:hover{
         padding-top: 10px;
         border: 1px solid;
         background-color: black;     
-}
+} */
+
+/* -------------------------------------   nav ends--------------------------------------- */
+
+/* ------------------- header------------------------ */
+/* header{
+   
+    width: 100%;
+  }
+  .container{
+    width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  nav>ul{
+    display: flex;
+  }
+  nav>ul>li{
+    padding: 30px;
+    list-style: none;
+  }
+  nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+  }
+  .megamenu{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    opacity: 0px;
+    visibility: hidden;
+    height: 300px;
+    left: 0px;
+    background-color: aquamarine;
+  }
+  nav>ul>li:hover .megamenu{
+    opacity: 1;
+    visibility: visible;
+  }
+  .megamenuitems>ul>li{
+    padding-left: 10px;
+    list-style: none;
+  }
+  .megamenuitems>ul>li>a{
+    color: black;
+    text-decoration: none;
+  } */
+
+/* ------------------- header ends------------------------ */
 #image-after-slider{
     margin-top: 2%;
 }
