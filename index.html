@@ -4,172 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/8f8488f52c.js" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        body{
+            font-family: 'Work Sans', sans-serif;
+        }
+        .main{
+            display: grid;
+            grid-template-columns:200px 504px 403px;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 1200px;
+            margin: auto;
+        }
+       
+        #images img{
+            width: 100%;
+        }
+        #pricing h2{
+            font-size: 14px;
+        }
+        #bar a{
+           color:#afacac;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 11px;
+        }
+        #bar a:hover{
+
+        }
+        #bar{
+            width: 1200px;
+            margin: auto;
+        }
+        p span{
+            text-decoration: line-through;
+        }
+        #offer{
+            display:grid;
+            grid-template-columns: 70px 202px;
+            font-size: 12px;
+          justify-content: center;
+           gap: 10px;
+           text-align: center;
+        }
+        #offer>div{
+            color: #b19975;
+            border-right: 1px solid black;
+            height: 45px;
+            margin-top: 8px;
+        }
+       #sizes>span{
+        font-size: 12px;
+        border: 1px solid black;
+         padding: 10px;
+         border-radius: 50%;
+         margin: 0px 10px 0px 10px;
+         cursor: pointer;
+       }
+       #location{
+        font-size: 12px;
+        margin-top: 10px;
+       }
+       
+    </style>
 </head>
 <body>
-    <div class="main-container">
-
- <!--****************** left container **************************-->
-        <div class="left">
-           <div>
-            <h2>Refined By</h2>
-            <div class="main-head">
-                <a href=""><h3 class="inner-head"><i class="fa-solid fa-plus" class="plus"></i>Gender</h3></a>
-                <div class="checkbox">
-                    <div>
-                        <input type="checkbox" name="" id="Male">
-                         <label for="Male">Male</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Female">
-                         <label for="Female">Female</label>
-                    </div>
-                </div>
-            </div>
-            <div class="main-head">
-                <a href=""><h3 class="inner-head"><i class="fa-solid fa-plus" class="plus"></i>Category</h3></a>
-                <div class="checkbox">
-                    <div>
-                        <input type="checkbox" name="" id="Shirt">
-                        <label for="Shirt">Shirt</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Jeans">
-                        <label for="Jeans">Jeans</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Kurtas">
-                        <label for="Kurtas">Kurtas</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Sarees">
-                        <label for="Sarees">Sarees</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Shoes">
-                        <label for="Shoes">Shoes</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Sandal">
-                        <label for="Sandal">Sandal</label>
-                    </div>
-                </div>
-            </div>
-            <div class="main-head">
-                <a href=""><h3 class="inner-head"><i class="fa-solid fa-plus" class="plus"></i>Price</h3></a>
-                <div class="checkbox" >
-                    <div>
-                        <input type="checkbox" name="" id="B1">
-                        <label for="B1">Below Rs.100</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="B2">
-                        <label for="B2">Rs.100 To Rs.500</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="B3">
-                        <label for="B3">Rs.501 To Rs.1000</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="B4">
-                        <label for="B4">Rs.1001 To Rs.1500</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="B5">
-                        <label for="B5">Above Rs.1500</label>
-                    </div>
-                </div>
-            </div>
-            <div class="main-head">
-                <a href=""><h3 class="inner-head"><i class="fa-solid fa-plus" class="plus"></i>Color</h3></a>
-                <div class="checkbox" >
-                    <div>
-                        <input type="checkbox" name="" id="Blue">
-                        <div class="color-box blue"></div>
-                        <label for="Blue">Blue</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="White">
-                        <div class="color-box white"></div>
-                        <label for="White">White</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Black">
-                        <div class="color-box black"></div>
-                        <label for="Black">Black</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Grey">
-                        <div class="color-box grey"></div>
-                        <label for="Grey">Grey</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Maroon">
-                        <div class="color-box maroon"></div>
-                        <label for="Maroon">Maroon</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Pink">
-                        <div class="color-box pink"></div>
-                        <label for="Pink">Pink</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Olive">
-                        <div class="color-box olive"></div>
-                        <label for="Olive">Olive</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="Multi">
-                        <div class="color-box multi"></div>
-                        <label for="Multi">Multi</label>
-                    </div>
-                </div>
-            </div>
-           </div>
-
-        </div>
- <!-- ****************** right container ****************** -->
-        <div class="main-right">
-            <div class="ads" ">
-                <h1>Shirts</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum saepe veritatis minima impedit atque vero nostrum, officiis animi rem maxime nisi aliquam ullam sit ab dolorem exercitationem, quaerat a. Recusandae quae, culpa adipisci beatae fugiat quia quaerat numquam voluptatibus fuga laudantium? Aut veniam maxime facilis aperiam voluptates nisi quasi blanditiis.</p>
-            </div>
-            <div class="filteredDev">
-                <div class="grid">
-                    <div class="pattern1">
-                        <div class="pattern"></div>
-                        <div class="pattern"></div>
-                        <div class="pattern"></div>
-                    </div>
-                    <div class="pattern2">
-                        <div class="pattern"></div>
-                        <div class="pattern"></div>
-                        <div class="pattern"></div>
-                        <div class="pattern"></div>
-                        <div class="pattern"></div>
-                    </div>
-                </div>
-                <div class="filter">
-                    <label for="">SORT BY : </label>
-                    <select name="" id="filter">
-                        <option value="">---choose your option</option>
-                        <option value="l2h">Low To High</option>
-                        <option value="asc">Ascending</option>
-                        <option value="des">Descending</option>
-                        <option value="h2l">High To Low</option>
-    
-                    </select>
-                    
-                </div>
-            </div>
-            <div class="right">
-                
-        
-            </div>
-        </div>
+    <div id="bar">
+        <a href="">Home</a>/<a href="">Men</a>/<a href="">Western Wear</a>/<a href="">Shirts</a>/<a href="">Checked Slim Fit Shirts</a>
     </div>
+    <div class="main">
+        <div id="preview"><img src="./Screenshot_20230223_090704.png" alt=""></div>
+        <div id="images">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20230216/ai9M/63ee06bff997dde6f4ab48f3/-473Wx593H-469241808-blue-MODEL5.jpg" alt="">
+        <p style="font-family:sans-serif ; font-size: 14px; color: gray;"><i>Our model wears a Size Medium</i></p>
+        </div>
+        <div id="pricing">
+            <p style="font-size: 20px
+            ;color: #b19975;">LEVIS</p>
+            <h1 style="font-size: 18px
+            ;">Checked Slim Fit Shirt</h1>
+            <p>1880</p>
+            <p style="font-size: 14px
+            ;color: #b19975;">MRP <span>₹3,299</span> (43% OFF)</p>
+            <p style="font-size: 12px;color: #999999;";>Price inclusive of all taxes</p>
+            <div id="offer">
+               <div>
+                <p>Cashback <br>discount</p> <a href="#">T&C</a>
+               </div>
+                <p>Get upto Rs 500 Mobikwik Cashback <br> on a minimum transaction value of Rs <br> 1500 using Mobikwik, minimum <br> assured cashback of Rs 50</p>
+                
+            </div>
+            <a style="font-size: 12px
+            ;" href="#">+4 More</a><br>
+            <p style="font-size: 14px
+            ;">Blue</p>
+            <img src="" alt="">
+           <div id="sizes">
+            <p>Select Size</p>
+            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+           </div>
+            <div id="location">
+                <p>
+                    Select your size to know your estimated delivery <br> date.</p>
+            </div>
+            <button>👜ADD TO BAG</button>
+           <p>HANDPICKED STYLES | ASSURED QUALITY</p>
+           <button>♡ SAVE TO WISHLIST</button>
+           <h3>Product Details</h3>
+        <h2>
+            <ul>
+               <li>Slim Fit</li> 
+               <li>Package contains: 1 shirt </li>
+               <li>Machine wash</li>
+               <li>56% linen, 44% cotton</li>
+               <li>Product Code: 469241808001</li>
+               <li><a href="#">About LEVIS</a></li>
+               <a href="#">Other information ˅ </a>
+            </ul>
+        </h2>
+        </div>
+        
+    </div>
+    
 </body>
-<script src="index.js"></script>
 </html>
