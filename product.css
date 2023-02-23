@@ -17,18 +17,15 @@ body{
     margin: auto;
    
 }
-.left{
-    /* border: 2px solid; */
-    padding:5px 20px;
-    
+.main-container .left div div{
+    position: -webkit-sticky;
+    position: sticky;
 }
-/* .left > div{
-    border: 2px solid blue;
-    
-} */
-/* .main-head{
-    border: 2px solid red;
-} */
+.left > div{
+    padding: 50px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .checkbox > div > input{
    border: 2px solid yellow;
    margin-left: 50px;
@@ -115,6 +112,7 @@ body{
 .right >div >div > button{
     padding: 5px 8px;
     margin-right: 5px;
+    margin-top: 10px;
     border-radius: 6px;
     background-color: rgb(243, 233, 234);
 }
@@ -123,8 +121,11 @@ body{
 }
 .filteredDev{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 20px 0;
+    padding: 15px 10px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .grid{
     display: flex;
@@ -165,9 +166,16 @@ body{
     margin-right: 10px;
 }
 
-/* .right > div> h4{
-    margin-bottom: 6px;
+.right > div> h4, .right >div > p{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
 }
-.right >div > p{
-    margin-bottom: 8px;
-} */
+
+/* Filter Section  */
+
+#filter{
+    padding: 5px 10px;
+    border-radius: 4px;
+}
