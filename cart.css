@@ -1,53 +1,29 @@
-
-.heading{
-    /* border: 2px solid blue; */
-    text-align: center;
+.nav{
+    display: flex;
 }
 
-.heading h1{
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    padding-top: 20px;
-}
-
-
-.empty{
-    /* border:2px solid green; */
-    text-align: center;
-}
-.empty p{
-    color: #585858;
-    font-family: SourceSansProSemiBold;
-    margin-bottom: 30px;
-    font-size: 18px;
-}
-
-.tag-line{
-    /* border:2px solid black; */
-    text-align: center;
-}
-
-.tag-line p{
-    margin-bottom: 20px;
-    font-size: 14px;
-    color:#585858
-}
-
-.btn{
+.logo{
     width:200px;
-    margin:auto;
-    /* border:2px solid yellow */
-    margin-bottom: 20px;
+    /* border: 2px solid red; */
+    height:150px
+}
+.bag{
+    /* border:2px solid red; */
+    height:150px
+}
+.bag img{
+    width:400px
 }
 
-.btn button{
-    background-color: #d5a249;
-    padding: 0 20px;
+.empty-tag{
+    text-align: center;
+    margin-top: 60px;
+}
+
+#shop{
     display: inline-block;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff!important;
     font-size: 14px;
     font-family: SourceSansPro;
     font-weight: 600;
@@ -55,34 +31,41 @@
     cursor: pointer;
     text-decoration: none;
     height: 50px;
-    line-height: 50px;
-    border-color: #d5a249;;
+    line-height: 50px;background-color: #d5a249;
+    padding: 0 20px;
 }
 
+.shop-btn{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.option{
+    /* border:2px solid black; */
+    display: flex;
+    justify-content:space-around;
+    margin-top: 50px;
+}
+
+.option img{
+    width:50%
+}
+
+.images img{
+    width:80%
+}
 
 .images{
     display: flex;
     justify-content: center;
-}
 
-.images img{
-    width:70%;
-
+    margin-top: 50px;
 }
 
 
-
-@media screen and (max-width:800px){
-  .images img{
-    display: none;
-  }
-  .images{
-    display: none;
-  }
-}
+/* <!-----------------------------------------------HEARDER END  ########################################## --> */
 
 
-/* --------------------------------- */
 *{
     margin: 0px;
     padding: 0px;
@@ -112,6 +95,7 @@
   .logo{
     margin: auto;
     margin-left: 60px;
+    margin-top: 20px;
   }
   .container-nav{
     display: flex;
