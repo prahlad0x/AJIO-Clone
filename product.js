@@ -1917,7 +1917,13 @@ function Display(data) {
     price.textContent = "Rs." + ele.price;
     Button1.textContent = "Show Details";
     Button2.textContent = "Add To Cart";
-
+    Button1.setAttribute('data-id', ele.id)
+    Button1.addEventListener('click', (e)=>{
+      // console.log(e.target.dataset.id)
+      localStorage.setItem('ProductId', JSON.stringify(ele))
+   
+      location.replace('detail.html')
+    })
     btnDiv.append(Button1, Button2);
     // headDiv.append(brand)
     offerDiv.append(offer, price);
