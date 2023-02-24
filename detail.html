@@ -5,129 +5,730 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <style>
-        body{
-            font-family: 'Work Sans', sans-serif;
-        }
-        .main{
-            display: grid;
-            grid-template-columns:200px 504px 403px;
-            gap: 50px;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 1200px;
-            margin: auto;
-        }
-       
-        #images img{
-            width: 100%;
-        }
-        #pricing h2{
-            font-size: 14px;
-        }
-        #bar a{
-           color:#afacac;
-            text-decoration: none;
-            margin: 10px;
-            font-size: 11px;
-        }
-        #bar a:hover{
-
-        }
-        #bar{
-            width: 1200px;
-            margin: auto;
-        }
-        p span{
-            text-decoration: line-through;
-        }
-        #offer{
-            display:grid;
-            grid-template-columns: 70px 202px;
-            font-size: 12px;
-          justify-content: center;
-           gap: 10px;
-           text-align: center;
-        }
-        #offer>div{
-            color: #b19975;
-            border-right: 1px solid black;
-            height: 45px;
-            margin-top: 8px;
-        }
-       #sizes>span{
-        font-size: 12px;
-        border: 1px solid black;
-         padding: 10px;
-         border-radius: 50%;
-         margin: 0px 10px 0px 10px;
-         cursor: pointer;
-       }
-       #location{
-        font-size: 12px;
-        margin-top: 10px;
-       }
-       
-    </style>
+   <link rel="stylesheet" href="detail.css">
 </head>
 <body>
+    <header>
+
+        <div class="container-nav" id="blur">
+    
+          <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
+          <div>
+            <div id="nav-end">
+              <a href="#">Sign In / Join Ajio</a>
+              <a href="">Customer Care</a>
+              <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
+            </div>
+            <nav id="nav-bar">
+              <ul>
+                <li>
+                  <a href="#" class="none">MEN</a>
+                  <div class="megamenu">
+                    <div class="megamenuitems">
+                      <h4><a href="#">CLOTHING</a></h4>
+                      <h4><a href="#">FOOTWEAR</a></h4>
+                      <h4><a href="#">ACCESSORIES</a></h4>
+                      <h4><a href="#">ALL THATS NEW</a></h4>
+                      <ul>
+                        <li><a href="#">Clothing </a></li>
+                        <li><a href="#">Footwear</a></li>
+                        <li><a href="#">Accessories</a></li>
+                      </ul>
+                      <h4><a href="#">AJIO GLOBAL</a></h4>
+                      <h4><a href="#">WINTERWEAR</a></h4>
+                      <h4><a href="#">NIGHT & LOUNGEWEAR</a></h4>
+                      <!-- ------------------------------------------ADD -->
+                      <h4><a href="#">GROOMING <button class="btn-pink">NEW</button></a></h4>
+                      <h4><a href="#">ETHNIC AND FESTIVE <button class="btn-ylw">HOT</button></a></h4>
+                      <ul>
+                        <li><a href="#">Kurtas And Shirts </a></li>
+                        <!-- <li><a href="#">Nehru Jackets</a></li> -->
+    
+                      </ul>
+                    </div>
+    
+                    <!-- ---------------------------copy this part -------------------------------- -->
+                    <div class="megamenuitems">
+                      <h4><a href="#">WESTERN WEAR</a></h4>
+                      <ul>
+                        <!-- Jackets & CoatsJeansShirts PantsTrousers & PantsT-Shirts -->
+                        <li><a href="#">Jackets & Coats </a></li>
+                        <li><a href="#">Jeans<button class="btn-ylw">Hot</button></a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Shorts & 3/4ths</a></li>
+                        <li><a href="#">Sweatshirts & HoodiesTrack</a></li>
+                        <li><a href="#">Track Pants</a></li>
+                        <li><a href="#">Trousers & Pants</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                      </ul>
+    
+                      <h4><a href="#">FOOTWEAR</a></h4>
+                      <ul>
+                        <li><a href="#">Casual Shoes</a></li>
+                        <li><a href="#">Flip-Flops & Slippers</a></li>
+                        <li><a href="#">Formal Shoes</a></li>
+                        <li><a href="#">Sandals</a></li>
+                        <li><a href="#">Sneakers <button class="btn-blw">NEW</button></a></li>
+                        <li><a href="#">Sports Shoes</a></li>
+                      </ul>
+    
+                    </div>
+                    <!-- ---------------------------copy this part -------------------------------- -->
+                    <!--  -->
+                    <div class="megamenuitems">
+                      <h4><a href="#">ACCESSORIES</a></h4>
+                      <ul>
+                        <li><a href="#">Backpacks</a></li>
+                        <li><a href="#">Bags & Wallets</a></li>
+                        <li><a href="#">Belts</a></li>
+                        <li><a href="#">Caps & Hats</a></li>
+                        <li><a href="#">Fashion Accessories <button class="btn-blw">Trending</button></a></li>
+                        <li><a href="#">Luggage & Trolleys</a></li>
+                        <li><a href="#">Socks</a></li>
+                        <li><a href="#">Sunglasses & Frames</a></li>
+                        <li><a href="#">Watches</a></li>
+                      </ul>
+                      <!-- PRECIOUS JEWELLERY  -->
+                      <h4><a href="#">PRECIOUS JEWELLERY</a></h4>
+                      <ul>
+                        <li><a href="#">Gold And Silver Coins</a></li>
+                        <li><a href="#">Flip-Flops & Slippers</a></li>
+                        <li><a href="#">Gold And Diamond Jewellery</a></li>
+                        <li><a href="#">Silver Jewellery</a></li>
+    
+                      </ul>
+                      <!-- INNERWEAR BriefsTrunks & BoxersVests -->
+                      <h4><a href="#">INNERWEAR</a></h4>
+                      <ul>
+                        <li><a href="#">Briefs</a></li>
+                        <!-- <li><a href="#">Trunks & Boxers</a></li>
+               <li><a href="#">Vests</a></li>         -->
+                      </ul>
+                    </div>
+    
+                    <!-- ---------------------------copy this part -------------------------------- -->
+                    <div class="megamenuitems">
+                      <h4><a href="#">FEATURED</a></h4>
+                      <ul>
+                        <li><a href="#">Bags Under 1499</a></li>
+                        <li><a href="#">Footwear Under 1499</a></li>
+                        <li><a href="#">Jeans Under 1199</a></li>
+                        <li><a href="#">Shorts & 3/4ths Under 699</a></li>
+                      </ul>
+                      <h4><a href="#">#AJIORECOMMENDS</a></h4>
+                      <ul>
+                        <li><a href="#">Play Time</a></li>
+                      </ul>
+                    </div>
+    
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#" class="none">WOMEN</a>
+                  <div class="megamenu">
+                    <div class="megamenuitems">
+                      <h4><a href="#">CLOTHING</a></h4>
+                      <h4><a href="#">FOOTWEAR</a></h4>
+                      <h4><a href="#">ACCESSORIES</a></h4>
+                      <h4><a href="#">ALL THATS NEW</a></h4>
+                      <h4><a href="#">WINTER WEAR</a></h4>
+                      <h4><a href="#">AJIO GLOBAL</a></h4>
+                      <h4><a href="#">BEAUTY <button class="btn-pink">NEW</button></a></h4>
+                      <h4><a href="#">ATHLEISURE</a></h4>
+                      <ul>
+                        <li><a href="#">Dresses & Gowns </a></li>
+                        <li><a href="#">Kurtas</a></li>
+                        <li><a href="#">Kurtis & Tunics</a></li>
+                        <li><a href="#">Pants & Shorts</a></li>
+                        <li><a href="#">Jackets & Shrugs</a></li>
+                        <li><a href="#">Shirts, Tops & Tunics</a></li>
+                      </ul>
+                    </div>
+                    <div class="megamenuitems">
+                      <h4><a href="#">ETHNIC WEAR</a></h4>
+                      <ul>
+                        <li><a href="#">Kurtas</a></li>
+                        <li><a href="#">Dress Material</a></li>
+                        <li><a href="#">Salwars & Churidars <button class="btn-blw">Trending</button></a></li>
+                        <li><a href="#">Kurtis & Tunics</a></li>
+                        <li><a href="#">Sarees</a></li>
+                        <li><a href="#">Dupattas</a></li>
+                        <li><a href="#">Blouses</a></li>
+                        <li><a href="#">Leggings</a></li>
+                        <li><a href="#">Skirts & Ghagras</a></li>
+                        <li><a href="#">Shawls & Wraps</a></li>
+                        <li><a href="#"> Palazzos & Culottes</a></li>
+                      </ul>
+    
+                      <h4><a href="#">JEWELLERY</a></h4>
+                      <ul>
+                        <li><a href="#">Gold And Silver Coins</a></li>
+                        <li><a href="#">Gold And Diamond Jewellery</a></li>
+                        <li><a href="#">Silver Jewellery</a></li>
+                        <li><a href="#">Fashion Jewellery</a></li>
+                      </ul>
+    
+                    </div>
+                    <div class="megamenuitems">
+                      <h4><a href="#">LINGERIE & INNERWEAR</a></h4>
+                      <ul>
+                        <li><a href="#">Bras</a></li>
+                        <li><a href="#">Panties</a></li>
+                        <li><a href="#">Camisoles & Slips</a></li>
+                        <li><a href="#">Maternity Wear</a></li>
+                        <li><a href="#">Thermal Wear</a></li>
+                      </ul>
+                      <!-- PRECIOUS JEWELLERY  -->
+                      <h4><a href="#">ACCESSORIES</a></h4>
+                      <ul>
+                        <li><a href="#">Sunglasses & Frames</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Bag, Belts And Wallets</a></li>
+                        <li><a href="#">Stoles And Scarves</a></li>
+                        <li><a href="#">Socks And Stockings</a></li>
+                        <li><a href="#">Caps</a></li>
+                        <li><a href="#">Luggage & Trolleys <button class="btn-pink">New</button></a></li>
+    
+                      </ul>
+                      <!-- INNERWEAR BriefsTrunks & BoxersVests -->
+                      <h4><a href="#">FEATURED</a></h4>
+                      <ul>
+                        <li><a href="#">Dresses Under 999</a></li>
+                        <li><a href="#">Footwear Under 799</a></li>
+                      </ul>
+                    </div>
+    
+                    <!-- ---------------------------copy this part -------------------------------- -->
+    
+                    <div class="megamenuitems">
+                      <h4><a href="#">FOOTWEAR</a></h4>
+                      <ul>
+                        <li><a href="#">Casual Shoes</a></li>
+                        <li><a href="#">Flat Sandals</a></li>
+                        <li><a href="#">Sports Shoes</a></li>
+                        <li><a href="#">Flip Flop & Slippers</a></li>
+                        <li><a href="#">Heeled Sandals <button class="btn-ylw">Hot</button></a></li>
+                        <li><a href="#">Heeled Shoes</a></li>
+                        <li><a href="#">Boots</a></li>
+                      </ul>
+                      <!-- 
+    Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
+                      <h4><a href="#">WESTERN WEAR</a></h4>
+                      <ul>
+                        <li><a href="#">Tops</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Jeans & Jeggings</a></li>
+                        <li><a href="#">Trousers & Pants</a></li>
+                        <li><a href="#">Skirts & Shorts</a></li>
+                        <li><a href="#">Track Pants</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Shrugs & Boleros</a></li>
+                      </ul>
+                    </div>
+    
+                </li>
+                <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
+              </ul>
+              <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
+    
+              <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   KIDS section  -->
+              <ul>
+                <li>
+                  <a href="#" class="none">KIDS</a>
+                  <div class="megamenu">
+                    <div class="megamenuitems">
+                      <h4><a href="#">NEW IN: CLOTHING</a></h4>
+                      <h4><a href="#">NEW IN: FOOTWEAR & ACCS</a></h4>
+                      <h4><a href="#">INNERWEAR & SLEEPWEAR</a></h4>
+                      <h4><a href="#">BOYS</a></h4>
+                      <ul>
+                        <li><a href="#">Denims & Trousers </a></li>
+                        <li><a href="#">Joggers & Track Pants <button class="btn-blw">Trending</button></a></li>
+                        <li><a href="#">Outerwear</a></li>
+                        <li><a href="#">Shirts</a><button class="btn-pink">New</button></li>
+                        <li><a href="#">Shorts & 3/4ths</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                      </ul>
+                      <h4><a href="#">SHOP BY AGE</a></h4>
+                      <ul>
+                        <li><a href="#">0 To 2 Years</a></li>
+                        <li><a href="#"> 2 To 5 Years</a></li>
+                        <li><a href="#">5 To 8 Years</a></li>
+                        <li><a href="#">12 Years And Above</a></li>
+                        <li><a href="#">12 Years And Above</a></li>
+                      </ul>
+                    </div>
+    
+                    <!-- ---------------------------copy this part -------------------------------- -->
+    
+                    <div class="megamenuitems">
+                      <h4><a href="#">FEATURED</a></h4>
+                      <ul>
+                        <!-- -->
+                        <li><a href="#">Denims Under 799</a></li>
+                        <li><a href="#">Shirts Under 599</a></li>
+                        <li><a href="#">T-Shirts Under 399</a></li>
+                      </ul>
+    
+    
+                      <h4><a href="#">GIRLS</a></h4>
+                      <ul>
+                        <li><a href="#">Dresses & Frocks</a></li>
+                        <li><a href="#">Jeans & Jeggings</a><button class="btn-ylw">Hot</button></li>
+                        <li><a href="#">Leggings </a></li>
+                        <li><a href="#">Outerwear</a></li>
+                        <li><a href="#">Skirts & Shorts</a></li>
+                        <li><a href="#">Tops & T-Shirts</a></li>
+                      </ul>
+                      <h4><a href="#">SHOP BY AGE</a></h4>
+                      <ul>
+                        <li><a href="#">0 To 2 Years</a></li>
+                        <li><a href="#"> 2 To 5 Years</a></li>
+                        <li><a href="#">5 To 8 Years</a></li>
+                        <li><a href="#">8 To 12 Years </a></li>
+                        <li><a href="#">12 Years And Above</a></li>
+                      </ul>
+                    </div>
+                    <!-- ---------------------------copy this part -------------------------------- -->
+    
+                    <div class="megamenuitems">
+                      <h4><a href="#">FEATURED</a></h4>
+                      <ul>
+                        <li><a href="#">Dresses Under 499</a></li>
+                        <li><a href="#">Tops Under 399</a></li>
+                      </ul>
+                      <!-- PRECIOUS JEWELLERY  -->
+                      <h4><a href="#">BABY</a></h4>
+                      <ul>
+                        <li><a href="#">SETS</a></li>
+                      </ul>
+                      <!-- INNERWEAR BriefsTrunks & BoxersVests -->
+                      <h4><a href="#">TOYS AND BABYCARE</a></h4>
+                      <ul>
+    
+                        <li><a href="#">Action-Figurine & Collectibles <button class="btn-ylw">Hot</button></a></li>
+                        <li><a href="#">Creative & Educational Toys</a></li>
+                        <li><a href="#">Gaming, Robots & Vehicles</a></li>
+                        <li><a href="#">Infants Toys</a></li>
+                        <li><a href="#">Role & Pretend Play</a></li>
+                        <li><a href="#">School, Party Supplies & Books</a></li>
+                        <li><a href="#">Soft Toys</a></li>
+                        <li><a href="#">Toy-Guns & Accessories <button class="btn-blw">Trending</button></a></li>
+                      </ul>
+                      <h4><a href="#">COLLECTIONS</a></h4>
+                      <h4><a href="#">AJIO EXCLUSIVES</a></h4>
+                      <!-- <h4><a href="#">FOOTWEAR & ACCESSORIES</a></h4> -->
+    
+                    </div>
+    
+                    <!-- ---------------------------copy this part -------------------------------- -->
+    
+                    <div class="megamenuitems">
+                      <h4><a href="#">FEATURED BRANDS</a></h4>
+    
+                      <ul>
+                        <li><a href="#">Crocs</a></li>
+                        <li><a href="#">MINI KLUB</a></li>
+                        <li><a href="#">Gini & JonyHamleys</a></li>
+                        <li><a href="#">Mothercare</a></li>
+                        <li><a href="#">Marks & Spencer</a></li>
+                        <li><a href="#">Pepe Jeans</a></li>
+                        <li><a href="#">Peppermint</a></li>
+                        <li><a href="#">UCB Kids</a></li>
+                        <li><a href="#">U.S.P.A Kids</a></li>
+                        <li><a href="#">MILA BABY</a></li>
+                        <li><a href="#">Under Armour</a></li>
+                        <li><a href="#">MUJI</a></li>
+                        <li><a href="#">Lee Cooper</a></li>
+                      </ul>
+                </li>
+                <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
+              </ul>
+              <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
+    
+              <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   INDIE section  -->
+              <ul>
+                <li>
+                  <a href="#" class="none">INDIE</a>
+                  <div class="megamenu">
+                    <div class="megamenuitems">
+                      <h4><a href="#">NEW IN: CLOTHING</a></h4>
+                      <h4><a href="#">NEW IN: SAREES</a></h4>
+                      <h4><a href="#">NEW IN: FOOTWEAR & ACCS</a></h4>
+                      <h4><a href="#">NEW IN: HOME</a></h4>
+                      <h4><a href="#">TOP SELLERS</a></h4>
+                      <h4><a href="#">CLOTHING</a></h4>
+                      <ul>
+                        <li><a href="#">Sarees <button class="btn-ylw">HOT</button></a></li>
+                        <li><a href="#">Kurtas</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Tops & Tunics</a></li>
+                        <li><a href="#">Dupattas</a></li>
+                        <li><a href="#">Dress Materials</a></li>
+                        <li><a href="#">Blouses & Blouse Fabrics</a></li>
+                        <li><a href="#">Pants, Skirts & Palazzos</a></li>
+                      </ul>
+    
+                      <!-- <h4><a href="#">ACCESSORIES</a></h4>
+                  <ul>
+                    <li><a href="#">Bags & Belts</a></li>
+                    <li><a href="#">Shawls & Wraps</a></li>
+                    <li><a href="#">Stoles & Scarves</a></li>
+                  </ul> -->
+                    </div>
+    
+                    <!-- ---------------------------copy this part -------------------------------- -->
+    
+                    <div class="megamenuitems">
+                      <h4><a href="#">HOME</a></h4>
+                      <ul>
+                        <!-- -->
+                        <li><a href="#">Bedsheets</a></li>
+                        <li><a href="#">Cushions And Covers</a></li>
+                        <li><a href="#">Curtains</a><button class="btn-blw">Trending</button></li>
+                        <li><a href="#">Table Linen</a></li>
+                        <li><a href="#">Rugs, Carpets & Dhurries</a></li>
+                      </ul>
+    
+    
+                      <h4><a href="#">WINTERWEAR</a></h4>
+                      <h4><a href="#">FOOTWEAR</a></h4>
+                      <ul>
+                        <li><a href="#">Chappals</a></li>
+                        <li><a href="#">Juttis</a></li>
+                      </ul>
+    
+                    </div>
+                    <!-- ---------------------------copy this part -------------------------------- -->
+    
+    
+                    <div class="megamenuitems">
+                      <h4><a href="#">REGIONAL SPECIALITIES</a></h4>
+                      <ul>
+    
+                        <li><a href="#">Ajrak</a></li>
+                        <li><a href="#">Bagru</a></li>
+                        <li><a href="#">Bagh</a></li>
+                        <li><a href="#">Banaras & Brocades</a></li>
+                        <li><a href="#">Chanderi & Maheshwari</a><button class="btn-pink">New</button></li>
+                        <li><a href="#">Indigo</a></li>
+                        <li><a href="#">Ilkal & Khun</a></li>
+                        <li><a href="#">IKAT</a></li>
+                        <li><a href="#">Kota</a></li>
+                        <li><a href="#">Kalamkari</a></li>
+                        <li><a href="#">Kullu</a></li>
+                        <li><a href="#">Kutch Embroidery</a></li>
+                        <li><a href="#">Kosa & Tussar</a></li>
+                        <li><a href="#">Linen</a></li>
+                        <li><a href="#">Mangalgiri</a></li>
+                        <li><a href="#">Narayanpet</a></li>
+                        <li><a href="#"> Pipar & Balotra</a></li>
+                        <li><a href="#">Shibori </a></li>
+                        <li><a href="#"> South Cotton</a></li>
+                        <!-- <li><a href="#">South Silk</a></li>
+            <li><a href="#">Tant Tangail & Jamdani</a></li> -->
+    
+                      </ul>
+                    </div>
+    
+                    <!-- ---------------------------copy this part -------------------------------- -->
+    
+                    <div class="megamenuitems">
+                      <h4><a href="#">FEATURED BRANDS</a></h4>
+    
+                      <ul>
+                        <li><a href="#">Indie Picks</a></li>
+                        <li><a href="#">Swadesh</a></li>
+                        <li><a href="#">Fabindia</a></li>
+                        <li><a href="#">Qura</a></li>
+                        <li><a href="#">Indethnic</a></li>
+                        <li><a href="#">Pothys</a></li>
+                        <li><a href="#">Banarasi Silk Works</a></li>
+                        <li><a href="#"> Awesome</a></li>
+                        <li><a href="#">Arteastri</a></li>
+                        <li><a href="#">Sajasajo</a></li>
+                        <li><a href="#">Nakshi</a></li>
+                        <li><a href="#">Angoshobha</a></li>
+                        <li><a href="#">Weaversvilla</a></li>
+                        <li><a href="#">AnuktaRangdeep</a></li>
+                      </ul>
+                </li>
+                <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
+              </ul>
+              <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
+    
+              <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   Home and kitchen section  -->
+              <ul>
+                <li>
+                  <a href="#" class="none">HOME AND KITCHEN</a>
+                  <div class="megamenu">
+                    <div class="megamenuitems">
+    
+    
+                      <h4><a href="#">BED LINEN</a></h4>
+                      <ul>
+                        <li><a href="#">Bedsheets</a></li>
+                        <li><a href="#">Bedding Sets</a></li>
+                        <li><a href="#">Blankets, Dohars & Quilts</a></li>
+                        <li><a href="#">ComfortersBed Covers</a></li>
+                        <li><a href="#">Mattress Protectors</a></li>
+                        <li><a href="#">Dress Materials</a></li>
+                        <li><a href="#">Quilt & Duvet Covers</a></li>
+                      </ul>
+    
+                      <h4><a href="#">CUSHIONS & PILLOWS</a></h4>
+                      <ul>
+                        <li><a href="#">Cushions</a></li>
+                        <li><a href="#">Pillows</a></li>
+                        <li><a href="#"> Bed Wedges & Neck Pillows</a></li>
+                        <li><a href="#"> Bolsters</a></li>
+                        <li><a href="#">Cushion Covers</a></li>
+                        <li><a href="#">Pillow Covers</a></li>
+                      </ul>
+                      <h4><a href="#">RUGS, CARPETS & MATS</a></h4>
+                    </div>
+                    <div class="megamenuitems">
+                      <h4><a href="#">CURTAIN & ACCESSORIES <button class="btn-ylw">HOT</button></a></h4>
+                      <ul>
+                        <!-- -->
+                        <li><a href="#">Window Curtains</a></li>
+                        <li><a href="#">Door Curtains</a></li>
+    
+                      </ul>
+                      <h4><a href="#">KITCHEN <BUTton class="btn-pink">NEW</BUTton></a></h4>
+                      <ul>
+                        <li><a href="#">Cookware & Cutlery</a></li>
+                        <li><a href="#">Bakeware</a></li>
+                        <li><a href="#">Kitchen Tools</a></li>
+                        <li><a href="#"> Kitchen Aprons, Gloves & Towel</a></li>
+                        <li><a href="#">Kitchen Organisers</a></li>
+                      </ul>
+                      <h4><a href="#">DINNING <button class="btn-pink">NEW</button></a></h4>
+                      <ul>
+    
+                        <li><a href="#">Serveware & Drinkware</a></li>
+                        <li><a href="#">Table Linen Sets</a></li>
+                        <li><a href="#">Table Covers & Runners</a></li>
+                        <li><a href="#">Table Napkins</a></li>
+                        <li><a href="#"> Placemats & Coasters</a></li>
+                      </ul>
+                      <h4><a href="#">STATIONERY & ORGANISERS</a></h4>
+                    </div>
+                    <div class="megamenuitems">
+                      <h4><a href="#">HOME DECOR <button class="btn-ylw">HOT</button></a></h4>
+                      <ul>
+    
+                        <li><a href="#">Wall DecorWall Shelves</a></li>
+                        <li><a href="#">Clocks</a></li>
+                        <li><a href="#">Photo Frames</a></li>
+                        <li><a href="#">Mirrors</a></li>
+                        <li><a href="#">Lamp, Diyas & Candle</a></li>
+                        <li><a href="#">Home Fragnance</a></li>
+                        <li><a href="#">Plants & Flowers</a></li>
+                      </ul>
+                      <h4><a href="#">FESTIVE GIFTS</a></h4>
+                      <ul>
+                        <li><a href="#">Bells & Wind Chimes</a></li>
+                        <li><a href="#">Decorative Pots, Plates & Jars</a></li>
+                        <li><a href="#">Fengshui</a></li>
+                        <li><a href="#">Indoor Fountains</a></li>
+                        <li><a href="#">Religious Idols</a></li>
+                        <li><a href="#">Vases</a></li>
+                      </ul>
+                      <h4><a href="#">GARDENING & PLANTERS</a></h4>
+                    </div>
+                    <div class="megamenuitems">
+                      <h4><a href="#">BATH</a></h4>
+    
+                      <ul>
+                        <li><a href="#"> Bath Towel & Robes</a></li>
+                        <li><a href="#">Hand & Face Towels</a></li>
+                        <li><a href="#">Towel Sets</a></li>
+                        <li><a href="#">Bathing Stools</a></li>
+                        <li><a href="#">Bath Curtains & Mats</a></li>
+                        <li><a href="#">Bathroom Organisers</a></li>
+                        <li><a href="#">Laundry Baskets & Dryers</a></li>
+                        <li><a href="#">Holders & More</a></li>
+                      </ul>
+                      <h4><a href="#">HOME ESSENTIALS</a></h4>
+                      <h4><a href="#">FEATURED STORIES</a></h4>
+                      <ul>
+                        <li><a href="#">GIFT For Everyone Under 999</a></li>
+                        <li><a href="#">Winter Carnival Upto 60</a></li>
+                        <li><a href="#">Kids Room Min 40</a></li>
+                        <li><a href="#">Heritage Of India</a></li>
+    
+                      </ul>
+                </li>
+              </ul>
+              <div id="search-container">
+                <div class="search-tab">
+                  <input type="text" placeholder="Search AJIO">
+                  <img src="./pictures/search-m.jpg" alt="">
+                </div>
+              </div>
+              <div class="add-to-bag">
+                <div>
+                  <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt="">
+                </div>
+                <div >
+                  <img  src="./pictures/addto-bag.png" alt="">
+                </div>
+                <!-- <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt=""> -->
+              </div>
+    
+          </div>
+          </nav>
+        </div>
+      </header>
     <div id="bar">
         <a href="">Home</a>/<a href="">Men</a>/<a href="">Western Wear</a>/<a href="">Shirts</a>/<a href="">Checked Slim Fit Shirts</a>
     </div>
-    <div class="main">
-        <div id="preview"><img src="./Screenshot_20230223_090704.png" alt=""></div>
-        <div id="images">
-        <img src="https://assets.ajio.com/medias/sys_master/root/20230216/ai9M/63ee06bff997dde6f4ab48f3/-473Wx593H-469241808-blue-MODEL5.jpg" alt="">
-        <p style="font-family:sans-serif ; font-size: 14px; color: gray;"><i>Our model wears a Size Medium</i></p>
-        </div>
-        <div id="pricing">
-            <p style="font-size: 20px
-            ;color: #b19975;">LEVIS</p>
-            <h1 style="font-size: 18px
-            ;">Checked Slim Fit Shirt</h1>
-            <p>1880</p>
-            <p style="font-size: 14px
-            ;color: #b19975;">MRP <span>₹3,299</span> (43% OFF)</p>
-            <p style="font-size: 12px;color: #999999;";>Price inclusive of all taxes</p>
-            <div id="offer">
-               <div>
-                <p>Cashback <br>discount</p> <a href="#">T&C</a>
-               </div>
-                <p>Get upto Rs 500 Mobikwik Cashback <br> on a minimum transaction value of Rs <br> 1500 using Mobikwik, minimum <br> assured cashback of Rs 50</p>
-                
-            </div>
-            <a style="font-size: 12px
-            ;" href="#">+4 More</a><br>
-            <p style="font-size: 14px
-            ;">Blue</p>
-            <img src="" alt="">
-           <div id="sizes">
-            <p>Select Size</p>
-            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-           </div>
-            <div id="location">
-                <p>
-                    Select your size to know your estimated delivery <br> date.</p>
-            </div>
-            <button>👜ADD TO BAG</button>
-           <p>HANDPICKED STYLES | ASSURED QUALITY</p>
-           <button>♡ SAVE TO WISHLIST</button>
-           <h3>Product Details</h3>
-        <h2>
-            <ul>
-               <li>Slim Fit</li> 
-               <li>Package contains: 1 shirt </li>
-               <li>Machine wash</li>
-               <li>56% linen, 44% cotton</li>
-               <li>Product Code: 469241808001</li>
-               <li><a href="#">About LEVIS</a></li>
-               <a href="#">Other information ˅ </a>
-            </ul>
-        </h2>
-        </div>
+    <div class="cont">
+         <div class="main"> 
+            <div id="photo">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20220820/8VfA/63004ed0aeb26917618b73d3/-473Wx593H-464852642-cream-MODEL6.jpg" alt="">
+                <p><i>Our model wears a Size Medium</i></p>
+                <a href="#">RETURN</a>
+                <a href="#">OUR PROMISE</a>
         
+            </div>
+            <div class="m">
+                <div id="pricing">
+                    <h2 id="category">mens</h2>
+                    <h1 id="name">nike shirt</h1>
+                    <p id="prc">1800</p>
+                    <p id="p">Price inclusive of all taxes</p>
+                    <div id="offer">
+                        <div>
+                            <p>Cashback <br>discount</p> <a href="#">T&C</a>
+                        </div>
+                        <p>Get upto Rs 500 Mobikwik Cashback <br> on a minimum transaction value of Rs <br> 1500 using Mobikwik, minimum <br> assured cashback of Rs 50</p>
+                    </div>
+                    <a id="of" href="#">+4 More</a><br>
+                    <p id="color">Blue</p>
+                    <p id="sz">Select Size</p>
+                    <div id="sizes">
+                        <span>S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                        <span>XXL</span>
+                    </div>
+                    <div id="location">
+                      <p>Select your size to know your estimated delivery <br> date.</p>
+                    </div>
+                    <div id="bt">
+                       <button id="bag">🛍️  ADD TO BAG</button>
+                       <p>HANDPICKED STYLES | ASSURED QUALITY</p>
+                       <button id="wishlist">♡  SAVE TO WISHLIST</button>
+                    </div>
+                    <div class="dtl">
+                        <h3>Product Details</h3>
+                        <h2>
+                            <ul>
+                                <li>Slim Fit</li> 
+                                <li>Package contains: 1 shirt </li>
+                                <li>Machine wash</li>
+                                <li>56% linen, 44% cotton</li>
+                                <li>Product Code: 469241808001</li>
+                                <li><a href="#">About LEVIS</a></li>
+                                <a href="#">Other information ˅ </a>
+                            </ul>
+                        </h2>
+                   </div>
+                </div>
+            </div>
+        </div>
+            <div style="width: 1200px;margin: auto;">
+                <hr class="hr-text" data-content="Shop More">
+                <div class="more">
+                    <div>
+                        <img src="https://assets.ajio.com/medias/sys_master/root/20221129/A696/6385c425f997ddfdbda3e322/shoetopia_beige_almond-toe_slingback_mules.jpg"alt="">
+                    </div>
+                    <div>
+      <img src="https://assets.ajio.com/medias/sys_master/root/20230122/bBXM/63cc4b8af997dd708e192c25/gorgone_turquoise_printed_saree_with_tassel_accent.jpg"alt="">
+                    </div>
+                    <div>
+                        <img src="https://assets.ajio.com/medias/sys_master/root/20230113/KFbr/63c17458aeb269c651dfea61/spykar_navy_blue_lightly_washed_skinny_fit_jeans.jpg"alt="">
+                    </div>
+                    <div>
+      <img src="https://assets.ajio.com/medias/sys_master/root/20220513/AhGv/627e22c9f997dd03e2b9a400/the_bear_house_maroon_checked_slim_fit_shirt_with_patch_pocket.jpg"alt="">
+                    </div>
+                </div>
+            </div>
+       <div id="lower">
+         <img  src="./Screenshot_20230224_100543.png" alt="">
+       </div>
+       
     </div>
-    
+   <script src="detail.js"></script>
+    <footer>
+    <div class="footer">
+      <div class="ajio-list">
+        <div class="heading">Ajio</div>
+        <div class="list">
+          <a href="">Who we are</a>
+          <a href="">Join our team</a>
+          <a href="">Terms & conditions</a>
+          <a href="">We respect your privacy</a>
+          <a href="">Fee & Payments</a>
+          <a href="">Return & Refunds policy</a>
+          <a href="">Promotions Terms & Conditions</a>
+        </div>
+      </div>
+      <div class="ajio-list">
+        <div class="heading">Help</div>
+        <div class="list">
+          <a href="">Track your order</a>
+          <a href="">Frequently Asked Questions</a>
+          <a href="">Returns</a>
+          <a href="">Cancellations</a>
+          <a href="">Payments</a>
+          <a href="">Customer Care</a>
+          <a href="">How Do I Redeem My Coupon</a>
+        </div>
+      </div>
+      <div class="ajio-list">
+        <div class="heading">Shop By</div>
+        <div class="list">
+          <a href="">Men</a>
+          <a href="">Women</a>
+          <a href="">Kids</a>
+          <a href="">Indie</a>
+          <a href="">Stores</a>
+          <a href="">New Arrivals</a>
+          <a href="">Bramd Directory</a>
+          <a href="">Home</a>
+          <a href="">Collections</a>
+        </div>
+      </div>
+      <div class="ajio-list">
+        <div class="heading">Follow Us</div>
+        <div class="list">
+          <a href="">Facebook</a>
+          <a href="">Instagram</a>
+          <a href="">Terms & conditions</a>
+          <a href="">Twitter</a>
+          <a href="">Pinterest</a>
+        </div>
+      </div>
+    </div>
+    <div id="line"></div>
+    <div>
+      <a href="#">Payment Methods</a>
+      <a href="#">Secure Systems</a>
+
+    </div>
+    <div class="last">
+      <div><img src="./pictures/netbanking.jpg" alt=""></div>
+      <div><img src="./pictures/visa.jpg" alt=""></div>
+      <div><img src="./pictures/mastercard.jpg" alt=""></div>
+      <div><img src="./pictures/jiomoney.jpg" alt=""></div>
+      <div><img src="./pictures/cashondelivery.jpg" alt=""></div>
+    </div>
+
+  </footer>
 </body>
 </html>
