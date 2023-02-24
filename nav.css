@@ -237,6 +237,86 @@ footer {
 /* ------------------------footer  ends----------------------- */
 
 
+*{
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+input:focus{
+  background-color: rgb(62, 64, 64);
+  border: 1px solid #e0d850;
+  background-color: #e8e8e8;
+  
+  outline: 0;
+  color: rgb(98, 96, 96);
+}
+input{
+  border-radius: 10px;
+  font-size: larger ;
+  padding: 10px;
+  border: 1px solid #4c4905;
+}
 
+input[type='number']::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+.register p,.login p{
+  cursor:default;
+  font-size: large;
+  margin:30px 10px 10px 0;
+}
+
+input[type='submit']{
+  border-radius: 7px;
+  margin: 40px 10px 30px 10px;
+  border: 1px solid yellow;
+  background-color: #f9f26c;
+}
+input[type='submit']:hover{
+  background-color: #cbc216;
+  cursor: pointer;
+  color: whitesmoke;
+}
+form{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  object-fit: cover;
+}
+.lr{
+  color: rgb(51, 167, 229);
+  cursor: pointer;
+}
+.login{
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.login,.register{
+  display: none;
+  height: 100vh;
+  background: transparent;
+}
+@media (max-width: 600px){
+  form{
+      width:100%;
+  }
+ .register p, .login p{
+      font-size: 14px;
+  }
+  input{
+      font-size: 16px;
+  }
+  
+}
+@media (max-width: 300px){
+  form{
+      padding: 10px;
+  }
+}
 
  

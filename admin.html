@@ -407,9 +407,9 @@
                 </div>
                 <div class="updateProduct AddEmployee">
                     <h1 id="update_details">Add Employee</h1>
-                    <input type="text" id="addEmployeeid" placeholder="Employee Id">
+                    <!-- <input type="text" id="addEmployeeid" placeholder="Employee Id"> -->
                     <input type="text" placeholder="Employee Name" id="addEmployeeName">
-                    <input type="text" placeholder="Employee ImageUrl" value="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" id="addEmployeeImage">
+                    <input type="text" placeholder="Employee ImageUrl" value="./pictures/avatar2" id="addEmployeeImage">
                     <input type="number" placeholder="Employee Salary" id="addEmployeeSalary">
                     <input type="text" placeholder="Employee Department" id="addEmployeeDepartment">
                     <button id="addEmployeeBtn">Add Employee</button>
@@ -2149,12 +2149,95 @@
     
 ]
 
+    let emp = [
+    {
+      "id": 1,
+      "name": "Brane",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "5",
+      "salary": "12345"
+    },
+    {
+      "id": 2,
+      "name": "Flossy Arrell",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 2,
+      "salary": 20000
+    },
+    {
+      "id": 3,
+      "name": "Giorgio Antonioni",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 3,
+      "salary": 95000
+    },
+    {
+      "name": "Himanshu",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": 4,
+      "salary": 100000,
+      "createdAt": 1670325954162,
+      "id": "tEYFrHNsdO"
+    },
+    {
+      "name": "Prashant",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": 3,
+      "salary": "12345",
+      "createdAt": 1670325954162,
+      "id": "yjkyh1htCb"
+    },
+    {
+      "name": "Rushikesh",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 3,
+      "salary": 3000000,
+      "createdAt": 1672901861637,
+      "id": "fh2BHnLqlU"
+    },
+    {
+      "id": "4FjVtmfUYz",
+      "name": "Anand Kumar",
+      "image": "/images/avatar/avatar2.jpeg",
+      "salary": "1000000"
+    },
+    {
+      "name": "Ajay Singh",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "2",
+      "salary": "80",
+      "createdAt": 1672913508984,
+      "id": "y1i4lO11Wk"
+    },
+    {
+      "id": "g5qs2OrO86",
+      "name": "Kumar Vishwas",
+      "department": "4",
+      "salary": "55555",
+      "createdAt": 1672919913274,
+      "image": "/images/avatar/avatar1.jpeg"
+    },
+    {
+      "name": "Prahlad Kuswah",
+      "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/762.jpg",
+      "salary": "1000000",
+      "department": "5",
+      "createdAt": 1676131884869,
+      "id": "p4ww64D9Ov"
+    }
+];
+    localStorage.setItem('employee',JSON.stringify(emp));
 
-    // getting employees
+// getting employees
     let AllEmployees = JSON.parse(localStorage.getItem('employee'))||[]
 
     let employeeCount = document.getElementById('incomeemployees')
+    function esmp(){
     employeeCount.innerText = AllEmployees.length;
+
+    }
+    esmp()
+
     // add Product
     let addProductTitleInp = document.getElementById('addProductTitle');
     let addProductPriceInp = document.getElementById('addProductPrice');
@@ -2186,11 +2269,12 @@
     let delelteProductbtn = document.getElementById("delete-Productbtn");
 
     //addEmployee
-    let addEmployeeIdInp = document.getElementById('addEmployeeid');
+    // let addEmployeeIdInp = document.getElementById('addEmployeeid');
     let addEmployeeNameInp = document.getElementById('addEmployeeName');
     let addEmployeeSalaryInp = document.getElementById('addEmployeeSalary');
     let addEmployeeDepartmentInp = document.getElementById('addEmployeeDepartment');
     let addEmployeeBtn = document.getElementById('addEmployeeBtn');
+    let addEmpImgInp = document.getElementById('addEmployeeImage');
 
 
     //updateEmployeeSalary
@@ -2213,13 +2297,13 @@
 
     // click events
     addProductbtn.addEventListener('click',()=>{
-        // addProduct()
+        addProduct()
         showNotification('Product Added Successfully')
         console.log('addProduct')
     });
 
     addEmployeeBtn.addEventListener('click', ()=>{
-        //addEmployee
+        addEmployee()
         console.log('addEmployee')
     });
 
@@ -2234,7 +2318,7 @@
     });
 
     updateProductPriceBtn.addEventListener('click',()=>{
-        //updateProductPrice
+        updateProductPrice()
         console.log('updateProductPrice')
     });
 
@@ -2251,6 +2335,7 @@
         if(detail == 'Products'){
             getProducts(API)
             selectTag.style.display='block'
+            selectTag.value = ''
             selectTag.addEventListener('change',filter)
         }
         if(detail == 'Orders'){
@@ -2264,6 +2349,35 @@
             getUsers();
         }
     }
+
+    function addEmployee(){
+        let obj = {
+            id : Math.floor(Math.random()*9000+1000),
+            name : addEmployeeNameInp.value,
+            salary :addEmployeeSalaryInp.value,
+            department : addEmployeeDepartmentInp.value,
+            image : addEmpImgInp.value
+        }
+
+        AllEmployees.push(obj)
+        localStorage.setItem('employee',JSON.stringify(AllEmployees))
+        showNotification("Employee Added Successfully")
+        esmp()
+    }
+
+    function updateProductPrice(){
+        let id = updateProductPriceIdInp;
+        let Price = updateProduct_PriceInp.value;
+        for(let i = 0;i<API.length; i++){
+            if(API[i].id == id){
+                API[i].price= Price
+                break;
+            }
+        }
+        // console.log(API)
+        showNotification('Price updated successfully')
+    }
+
 
     function updateSalary(){
         let id = updateSalaryIdInp.value;
@@ -2312,8 +2426,22 @@
             })
             OptionBtn.innerText  = 'More Options';
         }
-}
+    }
     
+    function addProduct(){
+        let obj = {
+            id : Math.floor(Math.random()*9000+1000),
+            title :addProductTitleInp.value,
+            category: addProductCategoryInp.value,
+            gender : addProductGenderInp.value,
+            color : addProductColorInp.value,
+            price :addProductPriceInp.value,
+            description : addProductDescriptionInp.value,
+            image : addProductImageInp.value
+        }
+        API.push(obj)
+    }
+
     function getProducts(data){
         main_container.innerHTML = ''
         let html = `${data.map((ele)=>{
@@ -2329,7 +2457,7 @@
     function getemployeecard(item){
         let card = `<div class='card'>
             <div class="image">
-                <img src="${item.image}" alt="image">
+                <img src="./pictures/avatar2.jpeg" alt="employee">
             </div>
             <div>
                 <p> id : ${item.id}</p>
@@ -2361,7 +2489,7 @@
     function getUsersCard(item){
         let card = `<div class='card'>
             <div class="image">
-                <img src="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50426.jpg?size=338&ext=jpg" alt="image">
+                <img src="./pictures/avatar1.jpeg" alt="User">
             </div>
             <div>
                 <p> UserName : ${item.userName}</p>
