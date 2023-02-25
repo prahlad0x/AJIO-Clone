@@ -156,5 +156,18 @@
         loginPage.style.display='none' 
         RegisterPage.style.display='grid'
     }
+
+    let login = document.querySelector('.login form')
+    login.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        if(loginUsernameInp.value == "admin"  && loginPassInp.value == 'admin'){
+        location.href = './admin.html'
+        }
+        else{
+           window.location.href ='./index.html'
+        }
+    })
+
+
 </script>
 </html>
