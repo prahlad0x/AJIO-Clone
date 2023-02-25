@@ -511,4 +511,8 @@ footer {
       width: 50%;
   
   }
+
+  #loginregister{
+    cursor: pointer;
+  }
   /* ------------------------footer  ends----------------------- */

@@ -17,6 +17,9 @@ body{
     margin: auto;
    
 }
+#loginregister{
+    cursor: pointer;
+  }
 .main-container .left div div{
     position: -webkit-sticky;
     position: sticky;
