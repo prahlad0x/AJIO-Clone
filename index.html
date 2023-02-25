@@ -8,6 +8,7 @@
   <title>Your Choice Online Shopping Website</title>
   <link rel="shortcut icon" type="image" href="./pictures/web-2.jpg">
 
+  <link rel="stylesheet" href="search.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/grid.css">
   <!-- Link bootstrap -->
@@ -17,6 +18,7 @@
 </head>
 
 <body>
+  <div id="right"></div>
   <!-----------------------------------------------HEARDER START  ########################################## -->
   <header> 
     
@@ -32,7 +34,7 @@
       <nav id="nav-bar">
         <ul>  
           <li>
-            <a href="#" class="none">MEN</a>
+            <a href="./product.html" class="none">MEN</a>
             <div class="megamenu">
               <div class="megamenuitems">
                 <h4><a href="#">CLOTHING</a></h4>
@@ -604,8 +606,9 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
       </div> -->
       <div id="search-container">
         <div class="search-tab">
-          <input type="text" placeholder="Search AJIO">
-          <img src="./pictures/search-m.jpg" alt="">
+          <input id="search-inp" type="text" placeholder="Search AJIO">
+          <button id="search-button"><img  src="./pictures/search-m.jpg" alt=""></button>
+          
         </div>
         
         <!-- <button style="border: red;">     </button> -->
@@ -627,6 +630,7 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
   </header>
   <!-----------------------------------------------HEARDER END  ########################################## -->
 
+ 
   <div class="desktop-none"><img src="https://assets.ajio.com/cms/AJIO/WEB/24022023-UHP-D-MainBanner-P5-JohnplayerLeecooperAvaasa-Upto700On1000.jpg" alt=""></div>
  <div class="slider-1">
   <!--Image slider 1 start-->
@@ -738,6 +742,7 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
 </div>
   <!---------------------2N SLIDER end------------- -->
   <!-------------------------Image below 2nd slider --------------------------------- -->
+  
   <div id="h">
     <img src="https://assets.ajio.com/cms/AJIO/WEB/Mobikwik-1440x128-23.jpg" alt="">
   </div>
@@ -803,7 +808,10 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
     <img src="https://assets.ajio.com/cms/AJIO/WEB/13102020-D-unisex-ajiocares-strip.jpg" alt="">
     <img src="./pictures/above-footer.png" alt="">
    </div>
+
+  
    <!---------------------------------Footer start----------------------------------------------- -->
+   <div class="hidden-for-search">
   <footer>
     <div class="footer">
       <div class="ajio-list">
@@ -871,7 +879,7 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
      
   </footer>
 
-
+</div>
 
 
 </body>
@@ -902,4 +910,5 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="search.js"></script>
 </html>
