@@ -10,7 +10,6 @@
 <body>
    <header>
     <div class="container-nav" id="blur">
-
       <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
       <div>
         <div id="nav-end">
@@ -22,8 +21,16 @@
       </nav>
     </div>
   </header>
-   <div class="cont">
-    <div id="product-cont"></div>
+   <div class="cont-main">
+<div id="cont">
+  <div id="product-cont"></div>
+  <div class="order-total">
+    <h5>Order Details</h5>
+    <p>Bag Total <span id="total">0</span></p>
+    <button class="proceed">PROCEED TO SHIPPING</button>
+  </div>
+</div>
+    
     <div class="empty-tag" >
         <p id="empty"></p>
     </div>
@@ -109,7 +116,12 @@
 </html>
 
 <script>
+  let totalPrice=document.getElementById("total")
 
+  let container=document.getElementById("cont")
+
+  let cartarr=JSON.parse(localStorage.getItem("bagproduct")) || []
+  
     let productCont=document.getElementById("product-cont")
     let count=0;
 
@@ -121,10 +133,12 @@
         btn.addEventListener("click", ()=>{
             location.href("product.html")
         })
+        container.outerHTML=""
     }
     else{
         empt.innerHTML="";
         btn.outerHTML=""
+        container.outerHTML!=""
     }
 
 </script>
