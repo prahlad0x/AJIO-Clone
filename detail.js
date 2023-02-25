@@ -1,3 +1,4 @@
+
 let uesrsName = localStorage.getItem('userName') || '';
 let singupPage = document.getElementById('loginregister')
 
@@ -16,6 +17,7 @@ product=localStorage.getItem("ProductId")||''
 // console.log(product)
 let bagproduct=JSON.parse(localStorage.getItem("bagproduct"))||[]
 let wishproduct=JSON.parse(localStorage.getItem("wishproduct"))||[]
+
 let btn1=document.getElementById("bag")
 let btn2=document.getElementById("wishlist")
 let image=document.getElementById("imj")
@@ -23,14 +25,13 @@ let price=document.getElementById("prc")
 let category=document.getElementById("category")
 let color=document.getElementById("color")
 let title=document.getElementById("name")
-
-
 function showdata(data){
           image.setAttribute('src',data.image)
           price.innerText=data.price
           category.innerText=data.category
           color.innerText=data.color
           title.innerText=data.title
+
           flag = false;
     for(let i = 0; i<bagproduct.length; i++){
       if(data.id == bagproduct[i]){
@@ -87,13 +88,16 @@ function showdata(data){
           } 
     })
 
+
     
      }
      function Data(id){
         for(i=0;i<AllProducts.length;i++){
             if(AllProducts[i].id==id){
                 showdata(AllProducts[i])
+
                 // console.log(AllProducts[i])
+
                 break;
             }
         }
