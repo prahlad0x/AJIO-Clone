@@ -31,8 +31,10 @@
     cursor: pointer;
     text-decoration: none;
     height: 50px;
-    line-height: 50px;background-color: #d5a249;
+    line-height: 50px;
+    background-color: #d5a249;
     padding: 0 20px;
+    border-color: #d5a249;
 }
 
 .shop-btn{
@@ -62,7 +64,44 @@
     margin-top: 50px;
 }
 
+#cont{
+  display: flex;
+}
 
+#product-cont{
+  width:80%
+}
+
+.order-total{
+  border:2px solid red;
+  background-color: #fafafa;
+}
+
+.order-total h5{
+  margin-bottom: 20px;
+}
+
+#total{
+  margin-left: 100px;
+}
+
+.proceed{
+  background-color: #d5a249;
+    padding: 0 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff!important;
+    font-size: 14px;
+    font-family: SourceSansPro;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px;
+    border-color: #d5a249;
+    margin-top: 20px;
+}
 /* <!-----------------------------------------------HEARDER END  ########################################## --> */
 
 
