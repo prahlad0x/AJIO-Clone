@@ -1,13 +1,18 @@
 let API = JSON.parse(localStorage.getItem('allProducts')) ||[];
+
+
 let searchkey = localStorage.getItem("search-key") || "" ;
 let rightDivEl = document.querySelector(".right");
 let total = document.getElementById("total")
+
+let bagproduct = JSON.parse(localStorage.getItem("bagproduct")) || [];
 
 function Display(data) {
   // let categoryHead = "shirt";
   // let DescPara = "hthasshasjthkjjjdjjdksjdfsjdfsjcbnxcmdjfhfhhfjkjs";
     total.textContent = data.length
   rightDivEl.innerHTML = "";
+
 
   data.forEach((ele, ind) => {
     let div = document.createElement("div");
@@ -36,16 +41,29 @@ function Display(data) {
     price.textContent = "Rs." + ele.price;
     Button1.textContent = "Show Details";
     Button2.textContent = "Add To Bag";
-
-    // a1.href = ""
-    // a2.href = ""
-
-    // Button1.addEventListener("click",()=>{
+    // Button2.setAttribute("data-id",ele.id)
       
-    // })
-    // Button2.addEventListener("click",()=>{
 
-    // })
+    Button1.addEventListener("click",(e) =>{
+      localStorage.setItem("ProductId", ele.id);
+      location.href = "detail.html"
+    })
+
+    Button2.addEventListener("click", (e)=>{
+        // localStorage.setItem("bagproduct",ele.id);
+        // Button2.textContent = "Remove from Bag";
+        if(Button2.innerText == "Add To Bag"){
+          bagproduct.push(ele.id);
+          localStorage.setItem("bagproduct",JSON.stringify(bagproduct));
+          Button2.textContent = "Remove from Bag";
+          alert("Product Added to the Bag")
+        }else if(Button2.innerText == "Remove from Bag"){
+          bagproduct = bagproduct.filter((el) => el != ele.id);
+          localStorage.setItem("bagproduct",JSON.stringify(bagproduct));
+          Button2.innerText = "Add To Bag";
+          alert("Product removed from bag");
+        }
+    })
 
     a1.append(Button1)
     a2.append(Button2)
