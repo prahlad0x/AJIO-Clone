@@ -439,6 +439,9 @@
     console.log(AllEmployees)
     let employeeCount = document.getElementById('incomeemployees')
 
+    //getting users
+    let userdata = JSON.parse(localStorage.getItem('userdata')) ||[]
+
     // add Product
     let addProductTitleInp = document.getElementById('addProductTitle');
     let addProductPriceInp = document.getElementById('addProductPrice');
@@ -590,7 +593,7 @@
 
     function getUsers(){
         main_container.innerHTML = ''
-        let html = `${AllEmployees.map((ele)=>{
+        let html = `${userdata.map((ele)=>{
             return getUsersCard(ele);
         }).join("")}`
         main_container.innerHTML = html
@@ -666,8 +669,8 @@
             </div>
             <div>
                 <p> UserName : ${item.userName}</p>
-                <p> Name : ${item.name}</p>
-                <p> Country : ${item.country}</p>
+                <p> Name : ${item.name} </p>
+                <p> Email : ${item.email}   ||    Contact : ${item.mobile}</p>
                 <p> Address : ${item.address}</p>
             </div></div>`
         return card;
