@@ -30,6 +30,12 @@ body{
    border: 2px solid yellow;
    margin-left: 50px;
 }
+
+.checkbox{
+    display: none;
+}
+
+
 .checkbox > div{
     margin-bottom: 10px;
 }
@@ -109,14 +115,14 @@ body{
 .right > div >p{
     margin-bottom: 5px;
 }
-.right >div >div > button{
+.right >div >div >a> button{
     padding: 5px 8px;
     margin-right: 5px;
     margin-top: 10px;
     border-radius: 6px;
     background-color: rgb(243, 233, 234);
 }
-.right >div >div > button:hover{
+.right >div >div >a> button:hover{
     background-color:rgb(238, 198, 202) ;
 }
 .filteredDev{
@@ -178,4 +184,20 @@ body{
 #filter{
     padding: 5px 10px;
     border-radius: 4px;
+}
+
+@media screen and (min-width: 800px) and (max-width:1060px) {
+   .right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   }
+}
+@media screen and (max-width:799px) {
+   .right{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   }
+   .grid{
+    display: none;
+   }
 }
