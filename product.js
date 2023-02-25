@@ -1882,7 +1882,7 @@ API = [
       "https://images.footlocker.com/is/image/EBFL2/Q8647100?wid=233&hei=233&fmt=png-alpha",
   },
 ];
-
+localStorage.setItem("allProducts",JSON.stringify(API))
 let rightDivEl = document.querySelector(".right");
 let total = document.getElementById("total")
 
@@ -1919,10 +1919,10 @@ function Display(data) {
     Button2.textContent = "Add To Cart";
     Button1.setAttribute('data-id', ele.id)
     Button1.addEventListener('click', (e)=>{
-      // console.log(e.target.dataset.id)
-      localStorage.setItem('ProductId', JSON.stringify(ele))
-   
-      location.replace('detail.html')
+    
+      localStorage.setItem('ProductId',ele.id)
+      // console.log(ele)
+      location.href='detail.html'
     })
     btnDiv.append(Button1, Button2);
     // headDiv.append(brand)
@@ -2278,11 +2278,9 @@ SareesEl.addEventListener("change" , (e)=>{
         })
         Display(filterData);
         document.querySelector(".product-desc").textContent = `${SareesEl.value}`;
-        document.querySelector(".about").textContent= `Traditional, trendy, stylish and graceful, there’s no denying that a woman’s beauty is accentuated by a saree. When you are shopping online for designer sarees for festive occasions or regular sarees for casual ethnic wear, you won’t have to look further than AJIO. From gorgeous silk sarees to crisp cottons, you’ll be amazed with the selection from brands such as Indie`
     }else{
         Display(API);
         document.querySelector(".product-desc").textContent = " All Product";
-        document.querySelector(".about").textContent= ""
     }
 });
 
@@ -2295,12 +2293,9 @@ ShoesEl.addEventListener("change" , (e)=>{
         })
         Display(filterData);
         document.querySelector(".product-desc").textContent = `${ShoesEl.value}`;
-        document.querySelector(".about").textContent= `Casual Shoes - Header
-        Get your casual style on point with AJIO’s collection of men’s casual shoes . From smooth slip-ons to snazzy loafers, the collection comprises of the trendiest in every style. Go ahead and step into the world of fashion, with the coolest of shoes`
     }else{
         Display(API);
         document.querySelector(".product-desc").textContent = " All Product";
-        document.querySelector(".about").textContent= ""
     }
 });
 
