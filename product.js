@@ -1,4 +1,5 @@
-let AllProducts = JSON.parse(localStorage.getItem('allProducts')) ||[]
+let API = JSON.parse(localStorage.getItem('allProducts')) ||[]
+let bagproduct = JSON.parse(localStorage.getItem('bagproduct')) || []
 let rightDivEl = document.querySelector(".right");
 let total = document.getElementById("total")
 
@@ -32,14 +33,42 @@ function Display(data) {
     offerDiv.setAttribute("class", "offerdiv");
     price.textContent = "Rs." + ele.price;
     Button1.textContent = "Show Details";
-    Button2.textContent = "Add To Cart";
+    flag = false;
+    for(let i = 0; i<bagproduct.length; i++){
+      if(ele.id == bagproduct[i]){
+        flag = true;
+      }
+    }
+    if(!flag){
+      Button2.textContent = "Add To Bag";
+    }
+    else{
+      
+      Button2.textContent = "Remove from Bag";
+    }
     Button1.setAttribute('data-id', ele.id)
     Button1.addEventListener('click', (e)=>{
       // console.log(e.target.dataset.id)
-      localStorage.setItem('ProductId', JSON.stringify(ele))
-   
-      location.replace('detail.html')
+      localStorage.setItem('ProductId', ele.id)
+      location.href = './detail.html'
     })
+
+    Button2.addEventListener('click',()=>{
+      if(Button2.innerText == "Add To Bag"){
+        bagproduct.push(ele.id)
+        localStorage.setItem('bagproduct', JSON.stringify(bagproduct));
+        Button2.innerText = "Remove from Bag"
+        alert('Product Added To Bag')
+      }
+      else if(Button2.innerText == "Remove from Bag"){
+        bagproduct = bagproduct.filter((el) => el != ele.id);
+        localStorage.setItem("bagproduct",JSON.stringify(bagproduct));
+        Button2.innerText = "Add To Bag";
+        alert("Product removed from bag");
+      } 
+    })
+
+
     btnDiv.append(Button1, Button2);
     // headDiv.append(brand)
     offerDiv.append(offer, price);
