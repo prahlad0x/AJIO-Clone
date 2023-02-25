@@ -232,6 +232,8 @@ border: 2px solid black;
     transform: scale(0.9);
     transition: 1s ease;
   }
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -524,3 +526,21 @@ footer {
   
   }
   /* ------------------------footer  ends----------------------- */
+  @media screen and (max-width:1024px) {
+    .main{
+   grid-template-columns:504px;
+     
+    }
+    #photo{
+      text-align: center;
+    }
+    .more{
+      display: grid;
+      grid-template-columns:repeat(2,400px);
+    }
+    header{
+      display: contents;
+      justify-content: center;
+    }
+    
+  }
