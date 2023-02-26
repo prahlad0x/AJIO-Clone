@@ -40,6 +40,7 @@
             <div class="box">
                 <span>cvv</span>
                 <div class="cvv-box"></div>
+
                 <img src="pictures/visa.jpg" alt="">
             </div>
         </div>
@@ -95,11 +96,14 @@
                 <input type="text" maxlength="4" class="cvv-input">
             </div>
         </div>
+
         <input type="submit"  id="ddd" class="submit-btn">
+
     </form>
 
 </div>    
 <script>
+
 
     let AllProducts = JSON.parse(localStorage.getItem('allProducts'))||[]
     let userName = localStorage.getItem('userName') || '';
@@ -130,8 +134,6 @@
 
 
     
-
-
 document.querySelector('.card-number-input').oninput = () =>{
     document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
 }

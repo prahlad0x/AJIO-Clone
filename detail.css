@@ -233,7 +233,6 @@ border: 2px solid black;
   transition: 1s ease;
 }
 
-
 *{
   margin: 0px;
   padding: 0px;
@@ -646,17 +645,21 @@ margin-left: 10px;
   padding-right: 20px;
   margin-right: 1.5%;
 }
+
 .add-to-bag >img{
   width: 50%;
   margin: auto;
   padding-bottom: 30px;
+
 }
 .add-to-bag div{
   margin-left:10px ;
   width:35px
 }
+
 /* .add-to-bag :nth-child(2){
 } */
+
 /* --------------------------------------------Add to bag-------------------------- */
 
 /* ------------------------footer----------------------- */
@@ -746,7 +749,9 @@ footer {
 }
 /* ------------------------footer  ends----------------------- */
 /* ------------------------footer  ends----------------------- */
+
 @media all and (min-width: 451px) and (max-width: 750px){
+
   .main{
  grid-template-columns:504px;
  width: 800px;
@@ -773,6 +778,7 @@ footer {
   }
   
 }
+
 @media all and (min-width: 100px) and (max-width: 450px) {
   .main{
  grid-template-columns:300px;
@@ -806,3 +812,4 @@ footer {
     width: 300px;
   }
 }
+
