@@ -442,6 +442,9 @@
     //getting users
     let userdata = JSON.parse(localStorage.getItem('userdata')) ||[]
 
+    //getting all order
+    let orders = JSON.parse(localStorage.getItem('orders'))||[]
+
     // add Product
     let addProductTitleInp = document.getElementById('addProductTitle');
     let addProductPriceInp = document.getElementById('addProductPrice');
@@ -541,6 +544,7 @@
         }
         if(detail == 'Orders'){
             main_container.innerHTML = `<h1>Orders btao bhai ko...</h1>`
+            getOrders();
         }
         if(detail == 'Employees'){
            getEmployees();
@@ -671,7 +675,7 @@
                 <p> UserName : ${item.userName}</p>
                 <p> Name : ${item.name} </p>
                 <p> Email : ${item.email}   ||    Contact : ${item.mobile}</p>
-                <p> Address : ${item.address}</p>
+                <p> City : ${item.location}</p>
             </div></div>`
         return card;
     }
@@ -748,6 +752,27 @@
         showNotification('Product Deleted Successfully')
     }
     
-    AllEmployeesCount();
+    function orderscard(item){
+        let card = `<div id="ProductCardMAIN">
+                    <div class="productcard">
+                    <img src="${item.image}" alt="Product Loading">
+                    </div>
+                    <div class="product2card">
+                        <p>TO: ${item.userName}</p>
+                        <p>id: ${item.id} Contact: ${item.mobile}</p> 
+                        <p>price: ${item.price}</p>
+                        <p>address:${item.address}</p>
+                    </div>
+                </div>`
+        return card;
+    }
+   
+    function getOrders(){
+        main_container.innerHTML = '';
+        let html = `
+        ${orders.map((ele)=>orderscard(ele)).join('')}`
+    }
+   
+   AllEmployeesCount();
 </script>
 </html>

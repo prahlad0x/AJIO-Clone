@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, sans-serif;
+        }
+        
+        form >p{
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: small;
+        }
+        .cont{
+            width: 100%;
+            background-color:whitesmoke;
+            height: 98vh;
+            padding: 30px;
+        }
+
+        form{
+            object-fit: inherit;
+            border: 0.5px solid rgb(215, 203, 203);
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+           background-color: white;
+        }
+
+        input{
+            border: none;
+            outline: 0;
+            background-color: white;
+            padding: 5px;
+            border-bottom: 0.4px solid rgb(242, 219, 219);
+        }
+        #radio{
+            display: flex;
+        }
+        #radio > div{
+            display: flex;
+            margin: auto 20px 0 0;
+        }
+        #radio > div > p{
+            font-size: small;
+            margin-left: 5px;
+        }
+        input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+        input[type='text']:focus,
+        input[type='number']:focus{
+            outline: 0;
+            border-bottom: 2px solid rgb(205, 184, 51);;
+            border-color: rgb(205, 184, 51);
+            font-size: large;
+            caret-color: rgb(226, 167, 41);
+        }
+
+        input[type='submit']{
+            border: none;
+            background-color: rgb(21, 167, 123);
+            color: black;
+            padding: 10px;
+            font-size: large;
+            margin: 40px 25% 30px 25% ;
+            border-radius: 8px;
+            cursor: pointer;
+
+        }
+        #radio input:hover{
+            cursor: pointer;
+        }
+        input[type='submit']:hover{
+            background-color: rgb(88, 200, 97);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <form action="#">
+            <p>Name :</p>
+            <input type="text" id="nameInp" placeholder="Name">
+            <p>Mobile :</p>
+            <input type="number" placeholder="Mobile" id="mobileInp">
+            <p>Pincode :</p>
+            <input type="number" placeholder="Pin code" id="pincodeInp" required>
+            <p>Locality/Area/Street</p>
+            <input type="text" placeholder="Locality/Area/Street" id="areaInp" required>
+            <p>Flat/Building/House No.</p>
+            <input type="text" placeholder="Flat/house no." id="flatInp" required>
+            <p>Landmark :</p>
+            <input type="text" placeholder="Landmark" id="landmarkInp" required>
+            <p>City :</p>
+            <input type="text" placeholder="District/City" id="cityInp" required>
+            <p>Address Type :</p>
+            <div id="radio">
+                <div>
+                    <input type="radio" id="Home">
+                    <p>Home</p>
+                </div>
+                <div>
+                    <input type="radio" id="Work">
+                    <p>Work</p>
+                </div>
+                <div>
+                    <input type="radio" id="Other">
+                    <p>Other</p>
+                </div>
+                
+            </div>
+            <input type="submit" value="Proceed To Pay">
+        </form>
+    </div>
+</body>
+<script>
+    let AllProducts = JSON.parse(localStorage.getItem('allProducts'))||[]
+    let userName = localStorage.getItem('userName') || '';
+    let Userdata = JSON.parse(localStorage.getItem('userdata')) || [];
+    let bagProducts = JSON.parse(localStorage.getItem('bagproduct'))||[];
+    let orders = JSON.parse(localStorage.getItem('orders'))||[]
+
+    // catching all inputs
+    let name = document.getElementById('nameInp')
+    let mobile = document.getElementById('mobileInp')
+    let pincode = document.getElementById('pincodeInp')
+    let area = document.getElementById('areaInp')
+    let flat = document.getElementById('flatInp')
+    let landmark = document.getElementById('landmarkInp')
+    let city = document.getElementById('cityInp')
+
+    //catching form
+    let formdata = document.querySelector('form')
+
+    let phone =''
+    //value of name and mobile
+    for(let i=0; i<Userdata.length; i++){
+        if(Userdata[i].userName == userName){
+            name.setAttribute('value', Userdata[i].name)
+            mobile.setAttribute('value', Userdata[i].mobile)
+            city.setAttribute('value', Userdata[i].location)
+            phone = Userdata[i].mobile;
+            cityname =Userdata[i].location
+            break;
+        }
+    }
+
+    formdata.addEventListener('submit', (e)=>{
+        let address = `${flat.value}/${area.value}/${city.value}/${pincode.value}`;
+        console.log(address)
+        e.preventDefault()
+        for(let i=0; i<AllProducts.length; i++){
+            let orderObj = {};
+            for(let j =0; j<bagProducts.length; j++){
+                if(AllProducts[i].id == bagProducts[j]){
+                    orderObj.userName = userName;
+                    orderObj.mobile = phone;
+                    orderObj.id = bagProducts[j];
+                    orderObj.image = AllProducts[i].image;
+                    orderObj.price = AllProducts[i].price;
+                    orderObj.quantity = AllProducts[i].quantity;
+                    orderObj.address = address;
+                    orderObj.status = false;
+                    orders.push(orderObj)
+                    localStorage.setItem('orders',JSON.stringify(orders))
+                    break;
+                }
+            }
+            console.log(orders)
+        }  
+
+        location.href = 'card.html'
+    })
+
+</script>
+</html>
