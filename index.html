@@ -27,7 +27,9 @@
       <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
       <div>
         <div id="nav-end">
-          <a id="loginregister">Sign In / Join Ajio</a>
+
+          <a id="loginregister"></a>
+
           <a href="">Customer Care</a>
           <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
         </div>
@@ -899,6 +901,15 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
 <script>
   let uesrsName = localStorage.getItem('userName') || '';
 
+  let singupPage = document.getElementById('loginregister')
+
+  if(uesrsName ==''){
+      singupPage.innerText ='Sign In / Join Ajio'
+  }
+  else{
+    singupPage.innerText = uesrsName;
+    // console.log(singupPage)
+  }
 
 
   function toggle(){
@@ -907,6 +918,7 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
   }
  
   let singupPage = document.getElementById('loginregister')
+
 
   singupPage.addEventListener('click',()=>{
     if(uesrsName == ''){
@@ -2718,6 +2730,7 @@ const Employees =  [
       API[i].quantity=1
     }
     localStorage.setItem('allProducts', JSON.stringify(API))
+
 </script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

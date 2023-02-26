@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="wishlist.css">
 </head>
 <body>
+
     <header>
 
         <div class="container-nav" id="blur">
@@ -582,6 +583,7 @@
           </nav>
         </div>
       </header>
+
     <div class="wish-cont">
         <div class="heading">
             <h1>My Wishlist</h1>
@@ -595,6 +597,7 @@
             
         </div>
         <div class="btn">
+
             <button id="shop-btn">CONTINUE SHOPPING</button>
         </div>
         <div class="images">
@@ -667,10 +670,12 @@
         </div>
     
       </footer>
+
 </body>
 </html>
 
 <script>
+
     let AllProducts = JSON.parse(localStorage.getItem('allProducts')) || []
     let wish=document.getElementById("wish-empty")
     let add=document.getElementById("add-products")
@@ -710,10 +715,12 @@
    
     
         if(wishData.length==0){
+
         wish.innerHTML="Your Wishlist is empty!!"
         add.innerHTML="ADD A FEW PRODUCTS AND THEN EXPLORE THE COOLEST WAY TO SHOP CLOTHES ONLINE!"
     }
     else{
+
         // displayData(wishData)
        let data= []
     for(let i=0;i<AllProducts.length;i++){
@@ -734,6 +741,7 @@
         productCont.innerHTML=""
         wish.innerHTML=""
         add.innerHTML=""
+
         data.forEach((el,ind) => {
             let card=document.createElement("div");
             let image=document.createElement("img")
@@ -746,6 +754,7 @@
             desc.textContent=el.description;
 
             let del=document.createElement("button")
+
             del.textContent="Remove"
             del.addEventListener("click", ()=>{
                 wishData.splice(ind,1)
@@ -771,13 +780,16 @@
 
             card.append(image, desc,price, del, addTobag)
 
+
             productCont.append(card)
         });
     }
+
     let bagPng=document.getElementById("bag-png")
     bagPng.addEventListener("click", ()=>{
       location.href="cart.html"
     })
+
     
     
 </script>

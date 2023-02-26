@@ -40,7 +40,8 @@
             <div class="box">
                 <span>cvv</span>
                 <div class="cvv-box"></div>
-                <img src="image/visa.png" alt="">
+
+                <img src="pictures/visa.jpg" alt="">
             </div>
         </div>
 
@@ -95,12 +96,44 @@
                 <input type="text" maxlength="4" class="cvv-input">
             </div>
         </div>
-        <input type="submit" value="submit" class="submit-btn">
+
+        <input type="submit"  id="ddd" class="submit-btn">
+
     </form>
 
 </div>    
 <script>
 
+
+    let AllProducts = JSON.parse(localStorage.getItem('allProducts'))||[]
+    let userName = localStorage.getItem('userName') || '';
+    let Userdata = JSON.parse(localStorage.getItem('userdata')) || [];
+    let bagProducts = JSON.parse(localStorage.getItem('bagproduct'))||[];
+    let orders = JSON.parse(localStorage.getItem('orders'))||[]
+    let totalPrice = localStorage.getItem('total');
+    let btn = document.getElementById('ddd')
+    btn.setAttribute('value',`Proceed To Pay ${totalPrice}`) 
+    console.log(btn)
+
+    let form = document.querySelector('form')
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        console.log(AllProducts.length)
+        for(let i=0; i<AllProducts.length; i++){
+            for(let j =0; j<orders.length; j++){
+                if(AllProducts[i].id == orders[j].id){
+                    console.log(orders[j])
+                    orders[j].status = true;
+                    console.log(orders[j])
+                    localStorage.setItem('orders',JSON.stringify(orders))
+                    break;
+                }
+            }
+        }
+    })
+
+
+    
 document.querySelector('.card-number-input').oninput = () =>{
     document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
 }

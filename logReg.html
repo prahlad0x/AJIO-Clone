@@ -135,6 +135,10 @@
     let loginPage = document.querySelector('.login')
     let RegisterPage = document.querySelector('.register')
 
+
+    //userdata
+    let Userdata = JSON.parse(localStorage.getItem('userdata')) || []
+
     //register inputs
     let registerUserNameInp = document.getElementById('registerUsername')
     let registerNameInp = document.getElementById('registerName')
@@ -148,6 +152,10 @@
     let loginUsernameInp = document.getElementById('loginUsername')
     let loginPassInp = document.getElementById('loginPass')
 
+    // getting forms
+    let login = document.querySelector('.login form')
+    let register= document.querySelector('.register form')
+
     function switchLogin(){
         loginPage.style.display='grid' 
         RegisterPage.style.display='none'
@@ -158,15 +166,79 @@
     }
 
     let login = document.querySelector('.login form')
+
     login.addEventListener('submit', (e)=>{
         e.preventDefault();
         if(loginUsernameInp.value == "admin"  && loginPassInp.value == 'admin'){
         location.href = './admin.html'
         }
         else{
+
            window.location.href ='./index.html'
         }
     })
+
+
+            let flag = true;
+            for(let i=0;i<Userdata.length; i++){
+                if(Userdata[i].userName == loginUsernameInp.value  && loginPassInp.value == Userdata[i].password){
+                    localStorage.setItem('userName', loginUsernameInp.value);
+                    showNotification('Successfully Logined')
+                    flag= false;
+                    window.location.href ='./index.html'
+                    break;
+                }
+                if(flag){
+                    showNotification('Username does not exists')
+                }
+            }
+        }
+    })
+
+    register.addEventListener('submit', (e)=>{
+        e.preventDefault()
+        let userName = registerUserNameInp.value;
+        let name = registerNameInp.value;
+        let mobile = registerMobileInp.value;
+        let email = registerEmailInp.value;
+        let location = registerLocationInp.value;
+        let password = registerPass1Inp.value;
+        let pass2 = registerPass2.value;
+        let address = '';
+        let flag = true;
+        for(let i = 0; i<Userdata.length; i++){
+            if(Userdata[i].userName == userName){
+                flag = false;
+                showNotification('Username already exists')
+                break;
+            }
+        }
+
+        if(password != pass2){
+        flag=false;
+        showNotification('Password does not match')
+        }
+        if(flag){
+            let obj={
+                userName,
+                name,
+                location,
+                address,
+                mobile,
+                email,
+                password
+            }
+            Userdata.push(obj);
+            localStorage.setItem('userdata', JSON.stringify(Userdata))
+            localStorage.setItem('userName', userName)
+            showNotification('Successfully registered')
+            window.location.replace('./index.html')
+        }
+    })
+
+    function showNotification(message){
+        alert(message)
+    }
 
 
 </script>

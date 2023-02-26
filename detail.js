@@ -1,4 +1,5 @@
 
+
 let uesrsName = localStorage.getItem('userName') || '';
 let singupPage = document.getElementById('loginregister')
 
@@ -12,6 +13,7 @@ let singupPage = document.getElementById('loginregister')
   })
 
   
+
 let AllProducts = JSON.parse(localStorage.getItem('allProducts')) ||[]
 product=localStorage.getItem("ProductId")||''
 // console.log(product)
@@ -48,6 +50,7 @@ function showdata(data){
 
           btn1.addEventListener('click',(e)=>{
             if(btn1.innerText == "Add To Bag"){
+
                 data.quantity=1
                 bagproduct.push(data.id);
                 console.log(data)
@@ -56,6 +59,7 @@ function showdata(data){
                 alert("Product Added to the Bag")
               }else if(btn1.innerText == "Remove from Bag"){
                 data.quantity=1
+
                 bagproduct = bagproduct.filter((el) => el != data.id);
                 localStorage.setItem("bagproduct",JSON.stringify(bagproduct));
                 btn1.innerText = "Add To Bag";
@@ -63,24 +67,23 @@ function showdata(data){
               } 
       })
 
-
       flag2 = false;
-    for(let i = 0; i<wishproduct.length; i++){
-      if(data.id == wishproduct[i]){
-        flag2 = true;
+      for(let i = 0; i<wishproduct.length; i++){
+        if(data.id == wishproduct[i]){
+          flag2 = true;
+        }
       }
-    }
-    if(!flag2){
-      btn2.textContent = "Save To Wishlist";
-    }
-    else{
-      
-      btn2.textContent = "Remove from Wishlist";
-    }
+      if(!flag2){
+        btn2.textContent = "Save To Wishlist";
+      }
+      else{
+        
+        btn2.textContent = "Remove from Wishlist";
+      }
       btn2.addEventListener('click',(e)=>{
         if(btn2.innerText == "Save To Wishlist"){
             wishproduct.push(data.id);
-            console.log(wishproduct)
+
             localStorage.setItem("wishproduct",JSON.stringify(wishproduct));
             btn2.textContent = "Remove from Wishlist";
             alert("Product Added to the Wishlist")
@@ -99,8 +102,6 @@ function showdata(data){
         for(i=0;i<AllProducts.length;i++){
             if(AllProducts[i].id==id){
                 showdata(AllProducts[i])
-
-                // console.log(AllProducts[i])
 
                 break;
             }

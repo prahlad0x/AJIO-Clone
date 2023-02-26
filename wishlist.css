@@ -1,4 +1,8 @@
 
+.wish-cont{
+    /* border:2px solid red */
+}
+
 
 .heading{
     /* border: 2px solid blue; */
@@ -68,7 +72,9 @@
 }
 
 .images img{
+
   width:80%
+
 }
 
 @media screen and (max-width:800px){
@@ -79,6 +85,7 @@
     display: none;
   }
 }
+
 
 
 *{
@@ -417,3 +424,4 @@ footer {
     box-shadow: none;
   }
 }
+
