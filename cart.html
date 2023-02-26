@@ -14,7 +14,7 @@
       <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
       <div>
         <div id="nav-end">
-          <a href="#">Sign In / Join Ajio</a>
+          <a id="loginregister"></a>
           <a href="">Customer Care</a>
           <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
         </div>
@@ -24,15 +24,19 @@
   </header>
 
    <div class="cont">
+
+    <div class="karan">
     <div id="product-order-cont">
       <div id="product-cont"></div>
-      <div id="order-total">
-        <h5>Order Summary</h5>
-        <p>Total:- <span id="total">0</span></p>
-
-        <button id="proceed">Proceed To Checkout</button>
-      </div>
     </div>
+    <div id="order-total">
+      <h5>Order Summary</h5>
+      <p>Total:- <span id="total">0</span></p>
+
+      <button id="proceed">Proceed To Checkout</button>
+    </div>
+  </div>
+
 
     <div class="empty-tag" >
         <p id="empty"></p>
@@ -191,23 +195,18 @@
             })
             let quantity = document.createElement("span");
             quantity.innerText=el.quantity
-            console.log(el.quantity)
+
             let inc=document.createElement("button")
             inc.textContent="+"
             inc.setAttribute("class", 'incbtn')
             inc.addEventListener("click", () => {
-             el.quantity+=1
-            //  sum+=Number(el.price*el.quantity)
-            //  total.innerText=sum
-            //  quantity.innerText=el.quantity
-             console.log(total)
+
+            el.quantity+=1
             localStorage.setItem("allProducts",JSON.stringify(AllProducts))
             displayData(data)
           
-        });
-        // sum+=Number(el.price*el.quantity)
-        // total.innerText=sum
-            
+        }); 
+
 
               let dec=document.createElement("button")
               dec.textContent="-"
