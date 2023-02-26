@@ -5,34 +5,40 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Choice Online Shopping Website</title>
-  <link rel="shortcut icon" type="image" href="./pictures/web-2.jpg">
+  <title>AJIO Online Shopping Website</title>
+  <link rel="shortcut icon" type="image" href="./pictures/mob-logo.png">
 
+  <link rel="stylesheet" href="search.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="./mob-nav.css" />
   <!-- Link bootstrap -->
+ 
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   
 </head>
-
 <body>
   <!-----------------------------------------------HEARDER START  ########################################## -->
   <header> 
-    
     <div class="container-nav" id="blur">
-  
-      <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
+      <div class="logo-mob"><img src="./pictures/mobile-logo.jpg" alt=""></div>
+      <div class="logo"><a href="./index.html"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></a></div>
+
+      <div class="none-icons">
+        
+      </div>
       <div>
         <div id="nav-end">
-          <a id="loginregister"></a>
+          <a href="#">Sign In / Join Ajio</a>
           <a href="">Customer Care</a>
           <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
         </div>
       <nav id="nav-bar">
         <ul>  
           <li>
-            <a href="#" class="none">MEN</a>
+            <a href="./product.html" class="none">MEN</a>
             <div class="megamenu">
               <div class="megamenuitems">
                 <h4><a href="#">CLOTHING</a></h4>
@@ -63,8 +69,8 @@
        <ul>
          <!-- Jackets & CoatsJeansShirts PantsTrousers & PantsT-Shirts -->
          <li><a href="#">Jackets & Coats </a></li>
-         <li><a href="#">Jeans<button class="btn-ylw">Hot</button></a></li>
-         <li><a href="#">Shirts</a></li>
+         <li><a href="./product.html">Jeans<button class="btn-ylw">Hot</button></a></li>
+         <li><a href="./product.html">Shirts</a></li>
          <li><a href="#">Shorts & 3/4ths</a></li>
          <li><a href="#">Sweatshirts & HoodiesTrack</a></li>
          <li><a href="#">Track Pants</a></li>
@@ -370,7 +376,7 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
              <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   INDIE section  -->
       <ul >   
         <li>
-          <a href="./product.html" class="none">INDIE</a>
+          <a href="#" class="none">INDIE</a>
           <div class="megamenu">
             <div class="megamenuitems">
               <h4><a href="#">NEW IN: CLOTHING</a></h4>
@@ -596,46 +602,44 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
     </li>
     <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
    </ul>
-       <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
-       <!-- <div id="searchnav" style="border: 1px solid red;">
-        <input id="search"   type="text" placeholder="Search for a Product, Brand  or Category"> 
-        <button style="border: none;"  id="search-btn">
-        <img style="width: 20px;" src="./pictures/search.jpg" alt=""></button>
-      </div> -->
+
       <div id="search-container">
         <div class="search-tab">
-          <input type="text" placeholder="Search AJIO">
-          <img src="./pictures/search-m.jpg" alt="">
+          <input id="search-inp" type="text" placeholder="Search AJIO">
+
+          <button id="search-button" style="border: none;"><a href="/product.html"><img style="border: none;" src="./pictures/search-m.jpg" alt=""></a></button>
+          
         </div>
-        
-        <!-- <button style="border: red;">     </button> -->
+       
       </div>
       <div class="add-to-bag">
         <div>
-          <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt="">
+          <a href="./wishlist.html"><img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt=""></a>
         </div>
         <div>
-          <img src="./pictures/addto-bag.png" alt="" >
+          <a href="./cart.html"><img src="./pictures/addto-bag.png" alt="" ></a>
 
         </div>
-        <!-- <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt=""> -->
       </div>
          
         </div>
       </nav>
+
+      <div class="mobile-nav-btn trialmenu" >
+        <!-- <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon> -->
+        <img src="https://imgs.search.brave.com/j2vy6RglXjbqrx5R8wOJJSNtAhJj7vwV8U2zPu8moB4/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzkx/Ni9QTkcvNTEyL01l/bnVfaWNvbl9pY29u/LWljb25zLmNvbV83/MTg1OC5wbmc" alt="menu">
+      </div>
+
     </div>
   </header>
   <!-----------------------------------------------HEARDER END  ########################################## -->
 
-  <div class="desktop-none"><img src="https://assets.ajio.com/cms/AJIO/WEB/24022023-UHP-D-MainBanner-P5-JohnplayerLeecooperAvaasa-Upto700On1000.jpg" alt=""></div>
- <div class="slider-1">
   <!--Image slider 1 start-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol> -->
+ 
+<div class="desktop-none"><img src="https://assets.ajio.com/cms/AJIO/WEB/24022023-UHP-D-MainBanner-P5-JohnplayerLeecooperAvaasa-Upto700On1000.jpg" alt=""></div>
+ <div class="slider-1">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
     <div class="carousel-inner">
       <div class="carousel-item active" data-interval="2000">
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-ClearanceSale.jpg" class="d-block w-100" alt="..." />
@@ -674,12 +678,15 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div> 
+
+
+
   <!-- <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol> -->
-  </div>
   <!-- *****************************slider 1 end************************************* -->
   <div id="image-after-slider" class="display-none-medium display-none-small">
     <div>
@@ -692,9 +699,10 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
       <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SpecieUpYourBrandGame-SectionheaderStrip.jpg" alt="">
     </div>
   </div>
+
   <!---------------------2N SLIDER------------- -->
-  <div class="slider-2 display-none">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="slider-2 display-none ">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
     <ol class="carousel-indicators" >
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -738,21 +746,23 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
 </div>
   <!---------------------2N SLIDER end------------- -->
   <!-------------------------Image below 2nd slider --------------------------------- -->
+  
   <div id="h">
     <img src="https://assets.ajio.com/cms/AJIO/WEB/Mobikwik-1440x128-23.jpg" alt="">
   </div>
-  <div>
+  <div style="overflow: hidden;">
     <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-Sectionheader.jpg" alt="">
    </div>
    <!------------------------------- 3-images under ur world of REWARDS -------------------------------->
-   <div id="three-images">
-    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-EarnUpto5.jpg" alt="">
+   <div id="three-images" >
+    
+    <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-EarnUpto5.jpg" alt=""></a>
     <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-Relianceone.jpg" alt="">
     <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-inviteFriends.jpg" alt="">
    </div>
    <!----------------------------------In trend img ------------------------------------------>
+   <img src="https://assets.ajio.com/cms/AJIO/WEB/UHP-AJIOBeauty-1440x397.jpg" alt="">
    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SponsorBrands-SectionHeader.jpg" alt="">
-
    <!---------------------------------After in trend 4 images -------------------------------->
    <div class="images-148">
     <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SponsorBrands-P1-Puma-4060.jpg" alt="">
@@ -767,43 +777,40 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
    </div>
 <!--------------------Use display grid -->
 <div class="circle-image-grid">
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P1-Westenrwear.jpg" alt="">
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P2-Trends.jpg" alt="">
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P3-Sneakerhood.jpg" alt="">
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/47.4_1.jpg" alt="">
+  <!-- <h1>axa</h1> -->
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P1-Westenrwear.jpg" alt=""></a>
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P2-Trends.jpg" alt=""></a>
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P3-Sneakerhood.jpg" alt=""></a>
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/47.4_1.jpg" alt=""></a>
 
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/47.4_1.jpg" alt="">
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P6-Footwear.jpg" alt="">
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P7-Accessories.jpg" alt="">
-  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P8-Wedding.jpg" alt="">
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/47.4_1.jpg" alt=""></a>
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P6-Footwear.jpg" alt=""></a>
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P7-Accessories.jpg" alt=""></a>
+  <a href="./product.html"><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P8-Wedding.jpg" alt=""></a>
   <!-- <div class="display-none"> -->
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P9-Sarees.jpg" alt="">
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P10-Homegrownbrands.jpg" alt="">
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P11-Indie.jpg" alt="">
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P12-Home.jpg" alt="">
+    
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P9-Sarees.jpg" alt=""></a>
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P10-Homegrownbrands.jpg" alt=""></a>
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P11-Indie.jpg" alt=""></a>
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P12-Home.jpg" alt=""></a>
 
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P13-Watches.jpg" alt="">
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P14-Innerwearmen.jpg" alt="">
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P15-Jewellery.jpg" alt="">
-  <img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P16-Lingerie.jpg" alt="">
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P13-Watches.jpg" alt=""></a>
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P14-Innerwearmen.jpg" alt=""></a>
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P15-Jewellery.jpg" alt=""></a>
+  <a href="./product.html"><img class="display-none display-none-small" src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P16-Lingerie.jpg" alt=""></a>
 <!-- </div> -->
 
 </div>
-<div class="white-image">
-  <img src="./pictures/white-image.png" alt="">
-</div>
 
-
-
-
-
-
-   <div>
+<div style="overflow: hidden;">
     <img src="https://assets.ajio.com/cms/AJIO/WEB/Discover%20Online%20Stnkores%20(D).jpg" alt="">
     <img src="https://assets.ajio.com/cms/AJIO/WEB/13102020-D-unisex-ajiocares-strip.jpg" alt="">
     <img src="./pictures/above-footer.png" alt="">
    </div>
+
+  
    <!---------------------------------Footer start----------------------------------------------- -->
+   <div class="hidden-for-search">
   <footer>
     <div class="footer">
       <div class="ajio-list">
@@ -856,7 +863,7 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
         </div>
       </div>
       <div id="line"></div>
-      <div>
+      <div class="none-dis">
         <a href="#">Payment Methods</a>
         <a href="#">Secure Systems</a>
         
@@ -871,22 +878,8 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
      
   </footer>
 
-
-
-
+</div>
 </body>
- 
-
-
-
-
-
-
-
-
-
-
-
 <!-- <script src="./index.js" ></script> -->
 <script>
   let uesrsName = localStorage.getItem('userName') || '';
@@ -913,6 +906,15 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
       window.location.href = './cart.html'
     }
   })
+
+  let searchinput = document.getElementById("search-inp");
+  let seachbutton = document.getElementById("search-button");
+  searchinput.addEventListener("click",()=> {
+       let get = searchinput.value;
+       localStorage.setItem("search-key",get.toLowerCase());
+       console.log(get)
+      //  window.location.href="product.js"
+    })
 
   const API = [
     {
@@ -2709,9 +2711,11 @@ const Employees =  [
     },
   ]
 
+  for(let i=0; i<API.length; i++){
+        API[i].quantity = 1
+  }
     localStorage.setItem('employee',JSON.stringify(Employees))
     localStorage.setItem('allProducts', JSON.stringify(API))
-    console.log(API.length)
 </script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

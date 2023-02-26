@@ -82,6 +82,17 @@
             background-color: rgb(88, 200, 97);
             color: white;
         }
+        @media (max-width:600px){
+            form{
+                width:100%
+            }
+            .cont{
+                padding: 0;
+            }
+            input[type='submit']{
+                margin: 30px 5% 20px 5%;
+            }
+        }
 
     </style>
 </head>
@@ -142,12 +153,14 @@
     let formdata = document.querySelector('form')
 
     let phone =''
+    let email = ''
     //value of name and mobile
     for(let i=0; i<Userdata.length; i++){
         if(Userdata[i].userName == userName){
             name.setAttribute('value', Userdata[i].name)
             mobile.setAttribute('value', Userdata[i].mobile)
             city.setAttribute('value', Userdata[i].location)
+            email = Userdata[i].email;
             phone = Userdata[i].mobile;
             cityname =Userdata[i].location
             break;
@@ -168,8 +181,8 @@
                     orderObj.image = AllProducts[i].image;
                     orderObj.price = AllProducts[i].price;
                     orderObj.quantity = AllProducts[i].quantity;
-                    orderObj.address = address;
-                    orderObj.status = false;
+                    orderObj.email = email;
+                    orderObj.address = address
                     orders.push(orderObj)
                     localStorage.setItem('orders',JSON.stringify(orders))
                     break;

@@ -3,6 +3,30 @@ let bagproduct = JSON.parse(localStorage.getItem('bagproduct')) || []
 let rightDivEl = document.querySelector(".right");
 let total = document.getElementById("total")
 
+
+let uesrsName = localStorage.getItem('userName') || '';
+  let singupPage = document.getElementById('loginregister')
+
+  if(uesrsName ==''){
+      singupPage.innerText ='Sign In / Join Ajio'
+  }
+  else{
+    singupPage.innerText = uesrsName;
+    // console.log(singupPage)
+  }
+
+  singupPage.addEventListener('click',()=>{
+    if(uesrsName == ''){
+      window.location.href ='./logReg.html'
+    }
+    else{
+      window.location.href = './cart.html'
+    }
+  })
+
+
+
+
 function Display(data) {
   // let categoryHead = "shirt";
   // let DescPara = "hthasshasjthkjjjdjjdksjdfsjdfsjcbnxcmdjfhfhhfjkjs";
@@ -287,7 +311,7 @@ MultiEl.addEventListener("change", (e) => {
 // ****************************** According to Price functionality **************************************
 
 B1El.addEventListener("change", (e) =>{
-    if(e.target.checked){
+    if(e.target.checked){z
         let filterData = API.filter((ele) => {
             if(ele.price < 100){
                 return true;

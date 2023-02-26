@@ -430,20 +430,29 @@
     </div>
 </body>
 <script>  
-
     //getting products
     let AllProducts = JSON.parse(localStorage.getItem('allProducts')) ||[]
 
     // getting employees
     let AllEmployees = JSON.parse(localStorage.getItem('employee'))||[]
-    console.log(AllEmployees)
     let employeeCount = document.getElementById('incomeemployees')
 
     //getting users
     let userdata = JSON.parse(localStorage.getItem('userdata')) ||[]
 
+    //total user count
+    let userTotal = document.getElementById('userTotal')
+    userTotal.innerText = userdata.length;
+
     //getting all order
     let orders = JSON.parse(localStorage.getItem('orders'))||[]
+
+    //orders count 
+    let totalorders = document.getElementById('ordreTotal')
+    totalorders.innerText = orders.length
+
+    //total income 
+    let total_income = document.getElementById('incomeTotal')
 
     // add Product
     let addProductTitleInp = document.getElementById('addProductTitle');
@@ -553,6 +562,14 @@
             main_container.innerHTML = `<h1>Users btao bhai ko...</h1>`
             getUsers();
         }
+    }
+
+    function total(){
+        let total = 0;
+        for(let i=0; i<orders.length; i++){
+            total += orders[i].price * orders[i].quantity
+        }
+        total_income.innerText = total
     }
 
     function AllEmployeesCount(){
@@ -759,7 +776,9 @@
                     </div>
                     <div class="product2card">
                         <p>TO: ${item.userName}</p>
-                        <p>id: ${item.id} Contact: ${item.mobile}</p> 
+                        <p>id: ${item.id}  ||  Status:${(item.status)? 'Completed' : "Pending"}</p> 
+                        <p>email: ${item.email}</p> 
+                        <p> Contact: ${item.mobile}</p>
                         <p>price: ${item.price}</p>
                         <p>address:${item.address}</p>
                     </div>
@@ -771,8 +790,10 @@
         main_container.innerHTML = '';
         let html = `
         ${orders.map((ele)=>orderscard(ele)).join('')}`
+        main_container.innerHTML = html;
     }
    
    AllEmployeesCount();
+   total()
 </script>
 </html>
