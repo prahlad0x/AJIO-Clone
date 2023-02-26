@@ -27,7 +27,9 @@
       <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
       <div>
         <div id="nav-end">
+
           <a id="loginregister"></a>
+
           <a href="">Customer Care</a>
           <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
         </div>
@@ -898,6 +900,7 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
 <!-- <script src="./index.js" ></script> -->
 <script>
   let uesrsName = localStorage.getItem('userName') || '';
+
   let singupPage = document.getElementById('loginregister')
 
   if(uesrsName ==''){
@@ -908,10 +911,14 @@ Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
     // console.log(singupPage)
   }
 
+
   function toggle(){
     let blur = document.getElementById("container-nav");
     blur.classList.toggle("active")
   }
+ 
+  let singupPage = document.getElementById('loginregister')
+
 
   singupPage.addEventListener('click',()=>{
     if(uesrsName == ''){
@@ -2719,7 +2726,11 @@ const Employees =  [
 
     localStorage.setItem('employee',JSON.stringify(Employees))
     localStorage.setItem('allProducts', JSON.stringify(API))
-    console.log(API.length)
+    for(let i=0;i<API.length;i++){
+      API[i].quantity=1
+    }
+    localStorage.setItem('allProducts', JSON.stringify(API))
+
 </script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
