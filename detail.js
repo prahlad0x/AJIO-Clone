@@ -1,23 +1,9 @@
 
-let uesrsName = localStorage.getItem('userName') || '';
-let singupPage = document.getElementById('loginregister')
-
-  singupPage.addEventListener('click',()=>{
-    if(uesrsName == ''){
-      location.href='logReg.html'
-    }
-    else{
-      location.href ='cart.html'
-    }
-  })
-
-  
 let AllProducts = JSON.parse(localStorage.getItem('allProducts')) ||[]
 product=localStorage.getItem("ProductId")||''
 // console.log(product)
 let bagproduct=JSON.parse(localStorage.getItem("bagproduct"))||[]
 let wishproduct=JSON.parse(localStorage.getItem("wishproduct"))||[]
-
 let btn1=document.getElementById("bag")
 let btn2=document.getElementById("wishlist")
 let image=document.getElementById("imj")
@@ -50,7 +36,7 @@ function showdata(data){
             if(btn1.innerText == "Add To Bag"){
                 bagproduct.push(data.id);
                 localStorage.setItem("bagproduct",JSON.stringify(bagproduct));
-                btn1.innerText = "Remove from Bag";
+                btn1.textContent = "Remove from Bag";
                 alert("Product Added to the Bag")
               }else if(btn1.innerText == "Remove from Bag"){
                 bagproduct = bagproduct.filter((el) => el != data.id);
@@ -59,21 +45,20 @@ function showdata(data){
                 alert("Product removed from bag");
               } 
       })
-
-
-      flag2 = false;
-    for(let i = 0; i<wishproduct.length; i++){
-      if(data.id == wishproduct[i]){
-        flag2 = true;
-      }
-    }
-    if(!flag2){
-      btn2.textContent = "Save To Wishlist";
-    }
-    else{
       
-      btn2.textContent = "Remove from Wishlist";
-    }
+      flag2 = false;
+      for(let i = 0; i<wishproduct.length; i++){
+        if(data.id == wishproduct[i]){
+          flag2 = true;
+        }
+      }
+      if(!flag2){
+        btn2.textContent = "Save To Wishlist";
+      }
+      else{
+        
+        btn2.textContent = "Remove from Wishlist";
+      }
       btn2.addEventListener('click',(e)=>{
         if(btn2.innerText == "Save To Wishlist"){
             wishproduct.push(data.id);
@@ -88,16 +73,13 @@ function showdata(data){
           } 
     })
 
-
     
      }
      function Data(id){
         for(i=0;i<AllProducts.length;i++){
             if(AllProducts[i].id==id){
                 showdata(AllProducts[i])
-
-                // console.log(AllProducts[i])
-
+                console.log(AllProducts[i])
                 break;
             }
         }
