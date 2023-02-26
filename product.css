@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+body{
+    margin: auto;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 15px;
+    width: 90%;
+    /* border: 1px solid ; */
+    margin: auto;
+   
+}
+#loginregister{
+    cursor: pointer;
+  }
+.main-container .left div div{
+    position: -webkit-sticky;
+    position: sticky;
+}
+.left > div{
+    padding: 50px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.checkbox > div > input{
+   border: 2px solid yellow;
+   margin-left: 50px;
+}
+.checkbox > div{
+    margin-bottom: 10px;
+}
+
+.main-head > a{
+    text-decoration: none;
+}
+.inner-head{
+    margin-bottom: 10px;
+   color: black;
+   
+}
+.checkbox > div > label:hover{
+    border-bottom: 3px solid black;
+    font-weight: bold;
+}
+.inner-head > i{
+    margin-right: 10px;
+}
+.color-box{
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    margin-left: 12px;
+}
+.blue{
+    background-color: blue;
+}
+.black{
+    background-color: black;
+}
+.grey{
+    background-color: grey;
+}
+.maroon{
+    background-color: maroon;
+}
+.pink{
+    background-color: pink;
+}
+.olive{
+    background-color: olive;
+}
+.multi{
+    background:linear-gradient(blue,red,yellow,green) ;
+}
+.main-right{
+    justify-content: center;
+    text-align: center;
+}
+.ads{
+    text-align: center;
+    
+    margin: 50px 0;  
+}
+.right{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    /* border: 2px solid red; */
+}
+.right > div{
+    line-height: 24px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 9px;
+    width: 100%;
+    padding-bottom: 20px;
+    
+}
+.right > div > img{
+    width: 100%;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+.right > div >p{
+    margin-bottom: 5px;
+}
+.right >div >div > button{
+    padding: 5px 8px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: rgb(243, 233, 234);
+}
+.right >div >div > button:hover{
+    background-color:rgb(238, 198, 202) ;
+}
+.filteredDev{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 15px 10px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.grid{
+    display: flex;
+}
+.pattern1,.pattern2{
+    /* background-color: green; */
+    display: flex;
+}
+
+.pattern{
+    height: 20px;
+    width: 6px;
+    background-color: grey;
+   margin-right: 5px;
+}
+
+.headdiv{
+    /* border: 2px solid red; */
+    height: 10%;
+    
+}
+.headtitle{
+    /* border: 2px solid red; */
+    height: 10%;
+}
+.right >div > div > div{
+    text-align: center;
+}
+.offerdiv{
+    display: flex;
+    justify-content:center;
+}
+.offerdiv :nth-child(2){
+    text-decoration: line-through;
+    color: rgb(160, 132, 136);
+}
+.offerdiv :nth-child(1){
+    margin-right: 10px;
+}
+
+.right > div> h4, .right >div > p{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+}
+
+/* Filter Section  */
+
+#filter{
+    padding: 5px 10px;
+    border-radius: 4px;
+}

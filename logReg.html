@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, sans-serif;
+        }
+        input:focus{
+            background-color: rgb(62, 64, 64);
+            border: 1px solid #e0d850;
+            background-color: #e8e8e8;
+            
+            outline: 0;
+            color: rgb(98, 96, 96);
+        }
+        input{
+            border-radius: 10px;
+            font-size: larger ;
+            padding: 10px;
+            border: 1px solid #4c4905;
+        }
+
+        input[type='number']::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+        .register p,.login p{
+            cursor:default;
+            font-size: large;
+            margin:30px 10px 10px 0;
+        }
+        
+        input[type='submit']{
+            border-radius: 7px;
+            margin: 40px 10px 30px 10px;
+            border: 1px solid yellow;
+            background-color: #f9f26c;
+        }
+        input[type='submit']:hover{
+            background-color: #cbc216;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        form{
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            object-fit: cover;
+        }
+        .lr{
+            color: rgb(51, 167, 229);
+            cursor: pointer;
+        }
+        
+        .login,.register{
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(1,1fr);
+            /* background: linear-gradient(120deg,#2980b9, #8e44ad); */
+        }
+        .login{
+            display: none;
+        }
+        
+        @media (max-width: 600px){
+            form{
+                width:100%;
+            }
+           .register p, .login p{
+                font-size: 14px;
+            }
+            input{
+                font-size: 16px;
+            }
+            
+        }
+        @media (max-width: 300px){
+            form{
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register">
+        <form action="#">
+            <p>USER NAME</p>
+            <input type="text" id="registerUsername" placeholder="Enter User Name" required>
+            <p>NAME</p>
+            <input type="text" id="registerName" placeholder="Enter Your Name" required>
+            <p>EMAIL</p>
+            <input type="text" id="registerEmail" placeholder="Enter Your Email" required>
+            <p>MOBILE NO.</p>
+            <input type="number" id="registerMobile" placeholder="Enter Your Phone no." required>
+            <p>CITY</p>
+            <input type="text" id="registerLocation" placeholder="Enter Your City" required>
+            <p>CREATE PASSWORD</p>
+            <input type="password" id="registerPass1" placeholder="Enter Password" required>
+            <p>CONFIRM PASSWORD</p>
+            <input type="password" id="registerPass2" placeholder="Confrim Password" required>
+            <input type="submit" value="REGISTER" id="registerBtn">
+            <div>
+               <p>
+                Already have an accound ? <span onclick="switchLogin()" class="lr">Login</span>
+               </p> 
+            </div>
+        </form>
+    </div>
+    <div class="login">
+        <form action="#" id="loginform">
+            <p>USER NAME</p>
+            <input type="text" id="loginUsername" placeholder="Enter Your Username" required>
+            <p>PASSWORD</p>
+            <input type="password" id="loginPass" placeholder="Enter Your Password" required>
+            <p>forgot password ?</p>
+            <input type='submit' value="LOGIN" id="loginBtn">
+            <div>
+               <p>Don't have an accout? <span onclick="switchRegister()" class="lr">Register</span></p>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    //both pages
+    let loginPage = document.querySelector('.login')
+    let RegisterPage = document.querySelector('.register')
+
+    //register inputs
+    let registerUserNameInp = document.getElementById('registerUsername')
+    let registerNameInp = document.getElementById('registerName')
+    let registerEmailInp = document.getElementById('registerEmail')
+    let registerLocationInp = document.getElementById('registerLocation')
+    let registerMobileInp = document.getElementById('registerMobile')
+    let registerPass1Inp = document.getElementById('registerPass1')
+    let registerPass2Inp = document.getElementById('registerPass2')
+
+    //login inputs
+    let loginUsernameInp = document.getElementById('loginUsername')
+    let loginPassInp = document.getElementById('loginPass')
+
+    function switchLogin(){
+        loginPage.style.display='grid' 
+        RegisterPage.style.display='none'
+    }
+    function switchRegister(){
+        loginPage.style.display='none' 
+        RegisterPage.style.display='grid'
+    }
+
+    let login = document.querySelector('.login form')
+    login.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        if(loginUsernameInp.value == "admin"  && loginPassInp.value == 'admin'){
+        location.href = './admin.html'
+        }
+        else{
+           window.location.href ='./index.html'
+        }
+    })
+
+
+</script>
+</html>

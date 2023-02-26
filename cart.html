@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+   <header>
+    <div class="container-nav" id="blur">
+
+      <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
+      <div>
+        <div id="nav-end">
+          <a href="#">Sign In / Join Ajio</a>
+          <a href="">Customer Care</a>
+          <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
+        </div>
+      </div>
+      </nav>
+    </div>
+  </header>
+   <div class="cont">
+    <div id="product-order-cont">
+      <div id="product-cont"></div>
+      <div id="order-total">
+        <h5>Order Summary</h5>
+        <p>Total:- <span id="total">0</span></p>
+
+        <button id="proceed">Proceed To Checkout</button>
+      </div>
+    </div>
+    <div class="empty-tag" >
+        <p id="empty"></p>
+    </div>
+    <div class="shop-btn">
+        <button id="shop">CONTINUE SHOPPING</button>
+    </div>
+   </div>
+   <div class="option">
+    <img src="options2.png" alt="">
+   </div>
+
+   <div class="images">
+    <img src="aa.png" alt="">
+   </div>
+
+   <footer>
+    <div class="footer">
+      <div class="ajio-list">
+        <div class="heading">Ajio</div>
+        <div class="list">
+          <a href="">Who we are</a>
+          <a href="">Join our team</a>
+          <a href="">Terms & conditions</a>
+          <a href="">We respect your privacy</a>
+          <a href="">Fee & Payments</a>
+          <a href="">Return & Refunds policy</a>
+          <a href="">Promotions Terms & Conditions</a>
+        </div>
+      </div>
+      <div class="ajio-list">
+        <div class="heading">Help</div>
+        <div class="list">
+          <a href="">Track your order</a>
+          <a href="">Frequently Asked Questions</a>
+          <a href="">Returns</a>
+          <a href="">Cancellations</a>
+          <a href="">Payments</a>
+          <a href="">Customer Care</a>
+          <a href="">How Do I Redeem My Coupon</a>
+        </div>
+      </div>
+      <div class="ajio-list">
+        <div class="heading">Shop By</div>
+        <div class="list">
+          <a href="">Men</a>
+          <a href="">Women</a>
+          <a href="">Kids</a>
+          <a href="">Indie</a>
+          <a href="">Stores</a>
+          <a href="">New Arrivals</a>
+          <a href="">Bramd Directory</a>
+          <a href="">Home</a>
+          <a href="">Collections</a>
+        </div>
+      </div>
+      <div class="ajio-list">
+        <div class="heading">Follow Us</div>
+        <div class="list">
+          <a href="">Facebook</a>
+          <a href="">Instagram</a>
+          <a href="">Terms & conditions</a>
+          <a href="">Twitter</a>
+          <a href="">Pinterest</a>
+        </div>
+      </div>
+    </div>
+    <div id="line"></div>
+    <div>
+      <a href="#">Payment Methods</a>
+      <a href="#">Secure Systems</a>
+
+    </div>
+    <div class="last">
+      <div><img src="./pictures/netbanking.jpg" alt=""></div>
+      <div><img src="./pictures/visa.jpg" alt=""></div>
+      <div><img src="./pictures/mastercard.jpg" alt=""></div>
+      <div><img src="./pictures/jiomoney.jpg" alt=""></div>
+      <div><img src="./pictures/cashondelivery.jpg" alt=""></div>
+    </div>
+
+  </footer>
+</body>
+</html>
+
+<script>
+    let AllProducts = JSON.parse(localStorage.getItem('allProducts')) ||[]
+    let productCont=document.getElementById("product-cont")
+  
+
+    let total=document.getElementById("total")
+
+    let cartArr=JSON.parse(localStorage.getItem("bagproduct")) || []
+    
+
+    // console.log(cartArr)
+
+
+    let orderSummary=document.getElementById("order-total")
+
+    let empt=document.getElementById("empty")
+    let btn=document.getElementById("shop")
+    btn.addEventListener("click", ()=>{
+      location.href="product.html"
+    })
+    if(cartArr.length==0){
+        empt.innerHTML="Your Shopping Bag is Empty!!"
+       orderSummary.innerHTML=""
+        // btn.innerHTML="CONTINUE SHOPPING"
+        btn.addEventListener("click", ()=>{
+            location.href("product.html")
+        })
+    }
+    else{
+      let data= []
+    for(let i=0;i<AllProducts.length;i++){
+        for(let j=0;j<cartArr.length;j++){
+            if(AllProducts[i].id==cartArr[j]){
+                data.push(AllProducts[i]);
+                break;
+            }
+        }
+    }
+    displayData(data)
+    }
+   
+
+    function displayData(data){
+        let sum=0
+        let wishData=JSON.parse(localStorage.getItem("bagproduct")) || []
+        productCont.innerHTML=""
+        empt.innerHTML=""
+        // btn.innerHTML=""
+        data.forEach((el,ind) => {
+            let card=document.createElement("div");
+            let image=document.createElement("img")
+            image.src=el.image;
+        
+            let price=document.createElement("h4")
+            price.textContent=el.price;
+          
+          
+            
+
+            let desc=document.createElement("p")
+            desc.textContent=el.description;
+
+            let del=document.createElement("button")
+            del.textContent="Remove from Bag"
+            del.setAttribute("id", 'removebtn')
+            del.addEventListener("click", ()=>{
+                cartArr.splice(ind,1)
+                localStorage.setItem("bagproduct", JSON.stringify(cartArr))
+                location.href="cart.html"
+            })
+            let quantity = document.createElement("span");
+            quantity.innerText=el.quantity
+            console.log(el.quantity)
+            let inc=document.createElement("button")
+            inc.textContent="+"
+            inc.setAttribute("class", 'incbtn')
+            inc.addEventListener("click", () => {
+             el.quantity+=1
+            //  sum+=Number(el.price*el.quantity)
+            //  total.innerText=sum
+            //  quantity.innerText=el.quantity
+             console.log(total)
+            localStorage.setItem("allProducts",JSON.stringify(AllProducts))
+            displayData(data)
+          
+        });
+        // sum+=Number(el.price*el.quantity)
+        // total.innerText=sum
+            
+
+              let dec=document.createElement("button")
+              dec.textContent="-"
+              dec.setAttribute("class", 'incbtn')
+              dec.addEventListener("click", ()=>{
+                if(el.quantity!=1){
+                  el.quantity=el.quantity-1
+                  localStorage.setItem("allProducts", JSON.stringify(AllProducts))
+                  displayData(data)
+                }
+              })
+              sum+=Number(el.price*el.quantity)
+              total.innerText=sum
+            
+
+            card.append(image,desc, price,inc,quantity, dec,  del, )
+
+            productCont.append(card)
+        });
+        // cartTotal()
+        
+    }
+
+    function cartTotal(){
+        let sum=0;
+        for(let i=0;i<cartArr.length;i++){
+            sum+=cartArr[i].price
+            console.log(cartArr.price)
+        }
+        total.innerText=+sum
+    }
+    
+    let proceed=document.getElementById("proceed")
+    proceed.addEventListener("click", ()=>{
+      location.href="checkout.html"
+    })
+
+</script>

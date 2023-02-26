@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin ki site
+    </title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "verdana", "sans-serif";
+        }
+
+        nav{
+            border: 1px solid grey;
+            background-color: bisque;
+            height: 60px;
+            width: 100%;
+        }
+
+        nav  h1{
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .main_container{
+            width: 100%;
+            /* border: 3px solid black; */
+            padding: 10px;
+        }
+
+        .Boxes{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 150px;
+            justify-content: space-evenly;
+            /* border: 1px solid green; */
+            padding: 10px;
+            gap:30px;
+            margin-bottom: 40px;
+        }    
+
+        .middle_container{
+            display: flex;
+            
+            /*border: 1px solid grey; */
+            justify-content: space-around;
+        }
+
+        .smallBoxes{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid orange; */
+            background-color: rgb(213, 216, 213);
+            font-size: larger;
+            border-radius: 10px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        
+
+        .button-container{
+            /* background-color: aquamarine; */
+            width: 30%;
+            padding: 16px;
+            padding-top: 30px;
+           border: .5px solid rgb(156, 155, 155);
+
+        }
+
+        .card_container{
+            /* background-color: rgb(41, 74, 121); */
+            width: 70%;
+            padding: 30px;
+        }
+        .card_container h1{
+            color: black;
+        }
+
+        .mainButton-box{
+            /* border: 1px solid black; */
+            padding: 10px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap:20px;
+            margin-bottom: 30px;
+        }
+
+        .getbutton{
+            height: 50px;
+            display: none;
+        }
+
+        #mainbutton{
+            height: 50px;
+            display: block;
+        }
+
+        #update_details{
+            font-weight: 400;
+        }
+        
+        input{
+           margin-bottom: 10px;
+           padding: 10px;
+           border: .5px solid grey;
+        }
+        /* input::-webkit-inner-spin-button{
+        
+        } */
+        button{
+            color: #FFF;
+            border: 1px solid #33C3F0;
+            background-color: #33C3F0;
+            font-size: large;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            border: 1px solid #1EAEDB;
+            background-color: #1EAEDB;
+            border-color: #1EAEDB;
+        }
+        #selecttag:focus{
+            border: 1px solid #33C3F0;
+            outline: 0; 
+        }
+        input:focus {
+            border: 1px solid #33C3F0;
+            outline: 0; 
+        }
+        #update-ProductPricebtn,
+        #update-Productbtn,
+        #add-Producbtn,
+        #update-ProducPricebtn,
+        #delete-Productbtn,
+        #addEmployeeBtn,
+        #updateSalary{
+            padding: 10px;
+            margin:5px 0px 20px 0px
+        }
+        #selecttag{
+            display: none;
+            padding: 10px;
+        }
+        .updateProduct{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            padding: 20px;
+        }
+
+        #updateEmployeeSalary_salary::-webkit-inner-spin-button,
+        #updateProductPrice::-webkit-inner-spin-button,
+        #addProductPrice::-webkit-inner-spin-button,
+        #updateProduct_Price::-webkit-inner-spin-button,
+        #addEmployeeSalary::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+        .notification{
+            text-align: center;
+            font-weight: 400;
+            background-color: #ecf5f2;
+            color: grey;
+            border: 1px dashed rgb(187, 182, 182);
+            padding: 5px;
+            width: 70%;
+            margin: auto;
+            margin-bottom: 10px;
+            display: none;
+            
+        }
+        
+        .card {
+            display: flex;
+            width: 100%;
+            border: 1px solid rgb(180, 179, 179);
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        .card > div{
+            height: 150px;
+        }
+        
+        .card > div:first-child{
+            width: 150px;
+            border:1px solid rgb(142, 139, 139);
+            margin-right: 20px;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+        }
+        .cardProduct{
+            display: flex;
+
+        }
+        #ProductCardMAIN{
+            margin: auto;
+            width: 75%;
+            display: flex;
+            padding: 10px;
+            border: 1px solid rgb(178, 174, 174);
+            margin-bottom: 30px;
+        }
+        #ProductCardMAIN img{
+            width: 200px;
+            border:1px solid black;
+            margin-right: 20px;
+            
+        }
+        
+        .product2card {
+            margin:0px
+        }
+        .product2card p{
+            margin:12px
+        }
+        
+
+        @media (max-width: 960px){
+            .Boxes{
+                
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,150px);
+            }
+            
+            
+        }
+        @media (max-width:600px){
+            .card p{
+                margin: 10px;
+            }
+        }
+
+        @media (max-width:  520px){
+           .Boxes{
+                
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: repeat(2,150px);
+            }
+            .button-container{
+                width: 100%;
+                /* border: 2px solid black; */
+            }
+            .button-container > .mainButton-box,.updateProduct{
+                padding: 10px;
+            }
+            .card > div{
+                height: 100px;
+            }
+        
+            .card > div:first-child{
+                width: 130px;
+                border:none;
+                margin-right: 10px;
+            }
+            .card img{
+                width: 100px;
+            }
+            .card p{
+                margin: 5px;
+                font-size: 14px;
+            }
+            
+        }
+
+        @media (max-width:  1000px){
+            .button-container{
+                width: 35%;
+            }
+            .card_container{
+                width: 65%;
+            }
+            #ProductCardMAIN{
+                width: 100%;
+            }
+        }
+
+        @media (max-width:  850px){
+            .middle_container{
+                flex-direction: column;
+                justify-content: center;
+            }
+            .card_container{
+                width: 100%;
+            }
+            .button-container{
+                width: 80%;
+                margin: auto;
+            }
+            .card_container{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .mainButton-box,.updateProduct{
+                padding: 40px
+            }
+            
+        }
+        @media (max-width:  490px){
+            .updateProduct{
+                padding: 0px;
+            }
+        }
+        @media (max-width:  650px){
+            
+            #ProductCardMAIN{
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+            #ProductCardMAIN img{
+                display: block;
+                margin-right: 50%;
+                margin-left:10%;
+            }
+        
+        }
+
+    </style>
+</head>
+<body>
+    <nav><h1>Hey! Admin Welcome</h1></nav>
+    <div class="main_container">
+        <div class="Boxes">
+            <div class="smallBoxes" style="background-color: rgb(244, 135, 222);">
+                <h2 id="ordreTotal" >33</h2>
+                <p>Total Orders</p>
+            </div>
+            <div class="smallBoxes" style="background-color: rgb(93, 162, 241);">
+                <h2 id="userTotal"  >88</h2>
+                <p>Total Registered Users</p>
+            </div>
+            <div class="smallBoxes" style="background-color: rgb(226, 159, 71);">
+                <h2 id="incomeemployees" ></h2>
+                <p>Total Employees</p>
+            </div>
+            <div class="smallBoxes" style="background-color: rgb(136, 234, 94);">
+                <h2 id="incomeTotal" >123344</h2>
+                <p>Total Income</p>
+            </div>
+        </div>
+        <h2 class="notification"></h2>
+        <div class="middle_container">
+            <div class="button-container">
+                <div class="mainButton-box">
+                    <button id="mainbutton">More Options</button>
+                    <button id="getAllProducs" data-id="Products" class="getbutton">Fetch All Products</button>
+                    <select name="" id="selecttag">
+                        <option value="">Get Products</option>
+                        <option value="shirt">Shirts</option>
+                        <option value="jeans">Jeans</option>
+                        <option value="kurtas">kurtas</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="sarees">Sarees</option>
+                        <option value="dress-material">Dress-material</option>
+                        <option value="sandals">Sandals</option>
+                    </select>
+                    <button id="getAllUsers" data-id="Users" class="getbutton">Fetch All Users</button>
+                    <button id="getAllOrders"  data-id="Orders" class="getbutton">Fetch All Orders</button>
+                    <button id="getAllEmployees" data-id="Employees" class="getbutton">Fetch All Employees</button>
+                    <div><hr></div>
+                </div>
+                <div class="AddProduct updateProduct">
+                    <h1 id="update_details">Add Product</h1>
+                    <input type="text" id="addProductTitle" placeholder="Product Title" required>
+                    <input type="number" id="addProductPrice" placeholder="Product Price" required>
+                    <input type="text" id="addProductImage" placeholder="Product ImageUrl"required>
+                    <input type="text" id="addProductCategory" placeholder="Product Categroy" required>
+                    <input type="text" id="addProductGender" placeholder="Product Gender" required>
+                    <input type="text" id="addProductColor" placeholder="Product Color" required>
+                    <input type="text" id="addProductDescription" placeholder="Product Description" required>
+                    <button id="add-Producbtn">Add Product</button>
+                    <div><hr></div>
+                </div>
+                <div class="updateProduct">
+                    <h1 id="update_details">Upate Product</h1>
+                    <input type="text"  id="updateProductId" placeholder="Product Id" required>
+                    <input type="text" id="updateProductTitle" placeholder="Product Title" required>
+                    <input type="number" id="updateProductPrice" placeholder="Product Price" required>
+                    <input type="text" id="updateProductImage" placeholder="Product ImageUrl" required>
+                    <input type="text" id="updateProductCategory" placeholder="Product Categroy" required>
+                    <input type="text" id="updateProductGender" placeholder="Product Gender" required>
+                    <input type="text" id="updateProductColor" placeholder="Product Color" required>
+                    <input type="text" id="updateProductDescription" placeholder="Product Description" required>
+                    <button id="update-Productbtn">Update Product</button>
+                    <div><hr></div>
+                </div>
+                <div class="updateProduct updatePrice">
+                    <h1 id="update_details">Upate Price</h1>
+                    <input type="text"  id="updateProductPriceId" placeholder="Product Id" required>
+                    <input type="number" id="updateProduct_Price" placeholder="Product Price" required>
+                    <button id="update-ProductPricebtn">Update Price</button>
+                    <div><hr></div>
+                </div>
+                <div class="updateProduct deleteProduct">
+                    <h1 id="update_details">Delete Product</h1>
+                    <input type="text" id="deleteProductId" placeholder="Product Id" >
+                    <button id="delete-Productbtn">Delete Product</button>
+                    <div><hr></div>
+                </div>
+                <div class="updateProduct AddEmployee">
+                    <h1 id="update_details">Add Employee</h1>
+                    <!-- <input type="text" id="addEmployeeid" placeholder="Employee Id"> -->
+                    <input type="text" placeholder="Employee Name" id="addEmployeeName">
+                    <input type="text" placeholder="Employee ImageUrl" value="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" id="addEmployeeImage">
+                    <input type="number" placeholder="Employee Salary" id="addEmployeeSalary">
+                    <input type="text" placeholder="Employee Department" id="addEmployeeDepartment">
+                    <button id="addEmployeeBtn">Add Employee</button>
+                    <div><hr></div>
+                </div>
+                <div class="updateProduct updateEmployeeSalary">
+                    <h1 id="update_details">Update Salary</h1>
+                    <input type="text" id="updateEmployeeSalary_Id" placeholder="Employee Id" >
+                    <input type="number" id="updateEmployeeSalary_salary" placeholder="Employee Salary" >
+                    <button id="updateSalary">Update Salary</button>
+                    <div><hr></div>
+                </div>
+            </div>
+            <div class="card_container">
+                <!-- append all cards here -->
+            </div>
+        </div>
+    </div>
+</body>
+<script>  
+
+    //getting products
+    let AllProducts = JSON.parse(localStorage.getItem('allProducts')) ||[]
+
+    // getting employees
+    let AllEmployees = JSON.parse(localStorage.getItem('employee'))||[]
+    console.log(AllEmployees)
+    let employeeCount = document.getElementById('incomeemployees')
+
+    // add Product
+    let addProductTitleInp = document.getElementById('addProductTitle');
+    let addProductPriceInp = document.getElementById('addProductPrice');
+    let addProductColorInp = document.getElementById('addProductColor');
+    let addProductCategoryInp = document.getElementById('addProductCategory');
+    let addProductGenderInp = document.getElementById('addProductGender');
+    let addProductImageInp = document.getElementById('addProductImage');
+    let addProductDescriptionInp = document.getElementById('addProductDescription');
+    let addProductbtn = document.getElementById('add-Producbtn');
+
+    // update Product
+    let updateProductIdInp = document.getElementById("updateProductId");
+    let updateProductTitleInp = document.getElementById('updateProductTitle');
+    let updateProductPriceInp = document.getElementById('updateProductPrice');
+    let updateProductColorInp = document.getElementById('updateProductColor');
+    let updateProductCategoryInp = document.getElementById('updateProductCategory');
+    let updateProductGenderInp = document.getElementById('updateProductGender');
+    let updateProductImageInp = document.getElementById('updateProductImage');
+    let updateProductDescriptionInp = document.getElementById('updateProductDescription');
+    let updateProductbtn = document.getElementById('update-Productbtn');
+
+    // update Product Price
+    let updateProduct_PriceInp = document.getElementById('updateProduct_Price');
+    let updateProductPriceIdInp = document.getElementById('updateProductPriceId');
+    let updateProductPriceBtn = document.getElementById('update-ProductPricebtn')
+
+    // deleProduct
+    let delelteProductIdInp = document.getElementById("deleteProductId");
+    let delelteProductbtn = document.getElementById("delete-Productbtn");
+
+    //addEmployee
+    let addEmployeeImageInp = document.getElementById('addEmployeeImage');
+    let addEmployeeNameInp = document.getElementById('addEmployeeName');
+    let addEmployeeSalaryInp = document.getElementById('addEmployeeSalary');
+    let addEmployeeDepartmentInp = document.getElementById('addEmployeeDepartment');
+    let addEmployeeBtn = document.getElementById('addEmployeeBtn');
+
+
+    //updateEmployeeSalary
+    let updateSalaryIdInp = document.getElementById('updateEmployeeSalary_Id');
+    let updateSalarySalaryInp = document.getElementById('updateEmployeeSalary_salary');
+    let updateSalaryBtn = document.getElementById('updateSalary');
+
+    // buttons
+    let fetchingBtns = document.querySelectorAll('.getbutton')
+    let OptionBtn = document.querySelector("#mainbutton")
+
+    //containers
+    let main_container = document.querySelector('.card_container');
+
+    // notification 
+    let notification = document.querySelector('.notification');
+
+    //selecttag
+    let selectTag = document.getElementById('selecttag');
+
+    // click events
+    addProductbtn.addEventListener('click',()=>{
+        addProduct()
+        // console.log('addProduct')
+    });
+
+    addEmployeeBtn.addEventListener('click', ()=>{
+        addEmployee()
+        // console.log('addEmployee')
+    });
+
+    updateProductbtn.addEventListener('click', ()=>{
+        updateProduct()
+        // console.log('updateProduct')
+    });
+
+    delelteProductbtn.addEventListener('click',()=>{
+        deleteProduct()
+        console.log('deleteProduct')
+    });
+
+    updateProductPriceBtn.addEventListener('click',()=>{
+        updateProductPrice()
+        // console.log('updateProductPrice')
+    });
+
+    updateSalaryBtn.addEventListener('click', ()=>{
+        updateSalary();
+        // console.log('updateSalary')
+    });
+
+    OptionBtn.addEventListener('click',()=>{
+        showOptions()
+    })
+
+    function fetching(detail){
+        if(detail == 'Products'){
+            getProducts(AllProducts)
+            selectTag.style.display='block'
+            selectTag.addEventListener('change',filter)
+        }
+        if(detail == 'Orders'){
+            main_container.innerHTML = `<h1>Orders btao bhai ko...</h1>`
+        }
+        if(detail == 'Employees'){
+           getEmployees();
+        }
+        if(detail == 'Users'){
+            main_container.innerHTML = `<h1>Users btao bhai ko...</h1>`
+            getUsers();
+        }
+    }
+
+    function AllEmployeesCount(){
+        employeeCount.innerText = AllEmployees.length;
+    }
+
+    function addEmployee(){
+        let obj = {
+            name :addEmployeeNameInp.value,
+            salary : addEmployeeSalaryInp.value,
+            image:addEmployeeImageInp.value,
+            department:addEmployeeDepartmentInp.value,
+            id:Math.floor(Math.random()*9000+1000)
+        }
+
+        AllEmployees.push(obj)
+        localStorage.setItem('employee',JSON.stringify(AllEmployees));
+        AllEmployeesCount()
+        showNotification('Employee Added Successfully')
+    }
+
+    function updateSalary(){
+        let id = updateSalaryIdInp.value;
+        let newsalary = updateSalarySalaryInp.value;
+        AllEmployees = AllEmployees.filter((el)=>{
+            if(el.id == id){
+                el.salary = newsalary
+            };
+            return el
+        })
+        localStorage.setItem('employee',JSON.stringify(AllEmployees))
+        showNotification('Salary Updated Successfully')
+    }
+
+    function getEmployees(){
+        main_container.innerHTML = ''
+        let html = `${AllEmployees.map((ele)=>{
+            return getemployeecard(ele);
+        }).join("")}`
+        main_container.innerHTML = html
+    }
+
+    function getUsers(){
+        main_container.innerHTML = ''
+        let html = `${AllEmployees.map((ele)=>{
+            return getUsersCard(ele);
+        }).join("")}`
+        main_container.innerHTML = html
+    }
+
+    function showOptions(){
+        if(OptionBtn.innerText == "More Options"){
+            fetchingBtns.forEach((el)=>{
+                el.style.display='block';
+                el.addEventListener('click',(e)=>{
+                    fetching(e.target.dataset.id)
+                })
+            })
+            OptionBtn.innerText  = 'Show Less Option';
+        }else{
+            selectTag.style.display ='none'
+            selectTag.value='';
+            fetchingBtns.forEach((el)=>{
+                el.style.display='none';
+            })
+            OptionBtn.innerText  = 'More Options';
+        }
+}
+    
+    function getProducts(data){
+        main_container.innerHTML = ''
+        let html = `${data.map((ele)=>{
+            return getproductcard(ele);
+        }).join("")}`
+        main_container.innerHTML = html
+    }
+    
+    function showNotification(message){
+        alert(message)
+    }
+
+    function getemployeecard(item){
+        let card = `<div class='card'>
+            <div class="image">
+                <img src="${item.image}" alt="image">
+            </div>
+            <div>
+                <p> id : ${item.id}</p>
+                <p> Name : ${item.name}</p>
+                <p> Salary : ${item.salary}</p>
+                <p> Department : ${item.department}</p>
+            </div></div>`
+        return card;
+    }
+
+    function getproductcard(item){
+        let card = `<div id="ProductCardMAIN">
+                    <div class="productcard">
+                    <img src="${item.image}" alt="Product Loading">
+                    </div>
+                    <div class="product2card">
+                        <p>id: ${item.id}</p>
+                        <p>title: ${item.title}</p>
+                        <p>category: ${item.category}</p>
+                        <p>gender: ${item.gender}</p>
+                        <p>price: ${item.price}</p>
+                        <p>color: ${item.color}</p>
+                        <p>description: ${item.description}</p>
+                    </div>
+                </div>`
+        return card;
+    }
+
+    function getUsersCard(item){
+        let card = `<div class='card'>
+            <div class="image">
+                <img src="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50426.jpg?size=338&ext=jpg" alt="image">
+            </div>
+            <div>
+                <p> UserName : ${item.userName}</p>
+                <p> Name : ${item.name}</p>
+                <p> Country : ${item.country}</p>
+                <p> Address : ${item.address}</p>
+            </div></div>`
+        return card;
+    }
+
+    function filter(){
+        let value = selectTag.value;
+        if(value == ''){
+            getProducts(AllProducts)
+        }
+        else{
+            let filtered = AllProducts.filter((a)=>a.category == value);
+            getProducts(filtered)
+        }
+    }
+
+    function addProduct(){
+        let o = {
+            id : Math.ceil(Math.random()*900+100),
+            description: addProductDescriptionInp.value,
+            title :addProductTitleInp.value,
+            color  : addProductColorInp.value,
+            gender :addProductGenderInp.value,
+            category:addProductCategoryInp.value,
+            image:addProductImageInp.value,
+            price:addProductPriceInp.value
+        }
+        AllProducts.push(o)
+        localStorage.setItem('allProducts',JSON.stringify(AllProducts))
+        showNotification('Product Added Successfully')
+    }
+
+    function updateProduct(){
+        let id = updateProductIdInp.value;
+        let description= updateProductDescriptionInp.value;
+        let   title = updateProductTitleInp.value;
+        let  color  = updateProductColorInp.value;
+        let   gender = updateProductGenderInp.value;
+        let   category = updateProductCategoryInp.vaue;
+        let   image = updateProductImageInp.value;
+        let price = updateProductPriceInp.value;
+        
+        AllProducts = AllProducts.filter((el)=>{
+            if(el.id== id){
+                el.description = description;
+                el.title = title;
+                el.color = color;
+                el.gender = gender;
+                el.category = category;
+                el.image = image;
+                el.price = price
+                showNotification('Product Updated Successfully') 
+            }
+        })
+        localStorage.setItem('allProducts', JSON.stringify(AllProducts))
+    }
+
+    function updateProductPrice(){
+        let id = updateProductPriceIdInp.value;
+        let price = updateProduct_PriceInp.value;
+        AllProducts = AllProducts.filter((el)=>{
+            if(el.id== id){
+                el.price = price
+                showNotification('Price Updated Successfully')
+            }
+            return el
+        })
+        localStorage.setItem('allProducts', JSON.stringify(AllProducts))
+    }
+
+    function deleteProduct(){
+        let id = delelteProductIdInp.value;
+        AllProducts = AllProducts.filter((el)=>el.id != id)
+        localStorage.setItem('allProducts', JSON.stringify(AllProducts))
+        showNotification('Product Deleted Successfully')
+    }
+    
+    AllEmployeesCount();
+</script>
+</html>
