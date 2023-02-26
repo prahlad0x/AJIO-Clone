@@ -24,6 +24,7 @@
   </header>
 
    <div class="cont">
+
     <div class="karan">
     <div id="product-order-cont">
       <div id="product-cont"></div>
@@ -35,6 +36,7 @@
       <button id="proceed">Proceed To Checkout</button>
     </div>
   </div>
+
 
     <div class="empty-tag" >
         <p id="empty"></p>
@@ -193,15 +195,18 @@
             })
             let quantity = document.createElement("span");
             quantity.innerText=el.quantity
+
             let inc=document.createElement("button")
             inc.textContent="+"
             inc.setAttribute("class", 'incbtn')
             inc.addEventListener("click", () => {
+
             el.quantity+=1
             localStorage.setItem("allProducts",JSON.stringify(AllProducts))
             displayData(data)
           
         }); 
+
 
               let dec=document.createElement("button")
               dec.textContent="-"

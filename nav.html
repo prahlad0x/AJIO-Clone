@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-   <link rel="stylesheet" href="detail.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nav-bar</title>
+  <link rel="stylesheet" href="./nav.css" />
+  <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="./navtest.css">
+  <!-- Link bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  
 </head>
+
 <body>
-  <header> 
-    <div class="container-nav" id="blur">
-      <div class="logo-mob"><img src="./pictures/mob-logo.png" alt=""></div>
-      <div class="logo"><a href="./index.html"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></a></div>
-
-
-      <div class="none-icons">
-        
-      </div>
+  <!-----------------------------------------------HEARDER START  ########################################## -->
+  <header>
+    <div class="container">
+  
+      <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
       <div>
         <div id="nav-end">
           <a href="#">Sign In / Join Ajio</a>
           <a href="">Customer Care</a>
           <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
         </div>
-      <nav id="nav-bar">
+      <nav style="display: flex;">
         <ul>  
           <li>
-            <a href="./product.html" class="none">MEN</a>
+            <a href="#">MEN</a>
             <div class="megamenu">
               <div class="megamenuitems">
                 <h4><a href="#">CLOTHING</a></h4>
@@ -42,11 +46,11 @@
                 <h4><a href="#">WINTERWEAR</a></h4>
                 <h4><a href="#">NIGHT & LOUNGEWEAR</a></h4>
                 <!-- ------------------------------------------ADD -->
-                <h4><a href="#">GROOMING <button class="btn-pink">NEW</button></a></h4>
+                <h4><a href="#">GROOMING <button class="btn">NEW</button></a></h4>
                 <h4><a href="#">ETHNIC AND FESTIVE <button class="btn-ylw">HOT</button></a></h4>
                 <ul>
                   <li><a href="#">Kurtas And Shirts </a></li>
-                  <!-- <li><a href="#">Nehru Jackets</a></li> -->
+                  <li><a href="#">Nehru Jackets</a></li>
                   
                 </ul>
               </div>  
@@ -57,8 +61,8 @@
        <ul>
          <!-- Jackets & CoatsJeansShirts PantsTrousers & PantsT-Shirts -->
          <li><a href="#">Jackets & Coats </a></li>
-         <li><a href="./product.html">Jeans<button class="btn-ylw">Hot</button></a></li>
-         <li><a href="./product.html">Shirts</a></li>
+         <li><a href="#">Jeans<button class="btn-ylw">Hot</button></a></li>
+         <li><a href="#">Shirts</a></li>
          <li><a href="#">Shorts & 3/4ths</a></li>
          <li><a href="#">Sweatshirts & HoodiesTrack</a></li>
          <li><a href="#">Track Pants</a></li>
@@ -66,7 +70,7 @@
          <li><a href="#">T-Shirts</a></li>
         </ul>
         
-        <h4><a href="#">FOOTWEAR</a></h4>
+        <h4><a href="#">Footwear</a></h4>
         <ul>
           <li><a href="#">Casual Shoes</a></li>
           <li><a href="#">Flip-Flops & Slippers</a></li>
@@ -77,6 +81,8 @@
         </ul>
         
       </div>  
+      <!-- ---------------------------copy this part -------------------------------- -->
+      <!--  -->
       <div class="megamenuitems">
         <h4><a href="#">ACCESSORIES</a></h4>
         <ul>
@@ -90,6 +96,7 @@
           <li><a href="#">Sunglasses & Frames</a></li>
           <li><a href="#">Watches</a></li>
          </ul>
+         <!-- PRECIOUS JEWELLERY  -->
          <h4><a href="#">PRECIOUS JEWELLERY</a></h4>
          <ul>
            <li><a href="#">Gold And Silver Coins</a></li>
@@ -98,19 +105,28 @@
            <li><a href="#">Silver Jewellery</a></li>
           
          </ul>
+         <!-- INNERWEAR BriefsTrunks & BoxersVests -->
          <h4><a href="#">INNERWEAR</a></h4>
          <ul>
            <li><a href="#">Briefs</a></li>
+           <li><a href="#">Trunks & Boxers</a></li>
+           <li><a href="#">Vests</a></li>        
          </ul>
        </div>  
-         <div class="megamenuitems">
+        
+        <!-- ---------------------------copy this part -------------------------------- -->
+     <div class="megamenuitems">
       <h4><a href="#">FEATURED</a></h4>
       <ul>
+        <!-- FEATURED
+Bags Under 1499Footwear Under 1499Jeans Under 1199Shorts & 3/4ths Under 699-->
         <li><a href="#">Bags Under 1499</a></li>
         <li><a href="#">Footwear Under 1499</a></li>
         <li><a href="#">Jeans Under 1199</a></li>
         <li><a href="#">Shorts & 3/4ths Under 699</a></li>
        </ul>
+       <!-- #AJIORECOMMENDS
+Play Time -->
        <h4><a href="#">#AJIORECOMMENDS</a></h4>
        <ul>
          <li><a href="#">Play Time</a></li>
@@ -119,9 +135,12 @@
 
       </li>
      </ul>
+
+
+     <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   women section  -->
      <ul >   
       <li>
-        <a href="#" class="none">WOMEN</a>
+        <a href="#">WOMEN</a>
         <div class="megamenu">
           <div class="megamenuitems">
             <h4><a href="#">CLOTHING</a></h4>
@@ -130,8 +149,10 @@
             <h4><a href="#">ALL THATS NEW</a></h4>
             <h4><a href="#">WINTER WEAR</a></h4>
             <h4><a href="#">AJIO GLOBAL</a></h4>
-            <h4><a href="#">BEAUTY  <button class="btn-pink">NEW</button></a></h4>
+            <h4><a href="#">NIGHT & LOUNGEWEAR</a></h4>
+            <h4><a href="#">BEAUTY  <button class="btn">NEW</button></a></h4>
             <h4><a href="#">ATHLEISURE</a></h4>
+            <h4><a href="#"></a>FUSION WEAR</h4>
             <ul>
               <li><a href="#">Dresses & Gowns </a></li>
               <li><a href="#">Kurtas</a></li>
@@ -141,9 +162,12 @@
               <li><a href="#">Shirts, Tops & Tunics</a></li>
             </ul>
           </div>  
+
+ <!-- ---------------------------copy this part -------------------------------- -->
  <div class="megamenuitems">
    <h4><a href="#">ETHNIC WEAR</a></h4>
    <ul>
+     <!-- -->
      <li><a href="#">Kurtas</a></li>
      <li><a href="#">Dress Material</a></li>
      <li><a href="#">Salwars & Churidars <button class="btn-blw">Trending</button></a></li>
@@ -166,6 +190,9 @@
     </ul>
     
   </div>  
+  <!-- ---------------------------copy this part -------------------------------- -->
+  <!-- 
+ -->
   <div class="megamenuitems">
     <h4><a href="#">LINGERIE & INNERWEAR</a></h4>
     <ul>
@@ -175,6 +202,7 @@
       <li><a href="#">Maternity Wear</a></li>
       <li><a href="#">Thermal Wear</a></li>
      </ul>
+     <!-- PRECIOUS JEWELLERY  -->
      <h4><a href="#">ACCESSORIES</a></h4>
      <ul>
        <li><a href="#">Sunglasses & Frames</a></li>
@@ -183,16 +211,21 @@
        <li><a href="#">Stoles And Scarves</a></li>
        <li><a href="#">Socks And Stockings</a></li>
        <li><a href="#">Caps</a></li>
-       <li><a href="#">Luggage & Trolleys <button class="btn-pink">New</button></a></li>
+       <li><a href="#">Luggage & Trolleys <button class="btn">New</button></a></li>
+      
      </ul>
+     <!-- INNERWEAR BriefsTrunks & BoxersVests -->
      <h4><a href="#">FEATURED</a></h4>
      <ul>
        <li><a href="#">Dresses Under 999</a></li>
        <li><a href="#">Footwear Under 799</a></li>       
      </ul>
    </div>  
+    
+    <!-- ---------------------------copy this part -------------------------------- -->
+    
  <div class="megamenuitems">
-  <h4><a href="#" >FOOTWEAR</a></h4>
+  <h4><a href="#">FOOTWEAR</a></h4>
   <ul>
     <li><a href="#">Casual Shoes</a></li>
     <li><a href="#">Flat Sandals</a></li>
@@ -202,6 +235,8 @@
     <li><a href="#">Heeled Shoes</a></li>
     <li><a href="#">Boots</a></li>
    </ul>
+   <!-- 
+Shirts Jumpsuits & PlaysuitsSweatshirts & HoodiesSweaters & Cardigans-->
    <h4><a href="#">WESTERN WEAR</a></h4>
    <ul>
      <li><a href="#">Tops</a></li>
@@ -216,34 +251,25 @@
  </div>
 
   </li>
+  <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
  </ul>
+     <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
+
+      <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   KIDS section  -->
       <ul >   
         <li>
-          <a href="#" class="none">KIDS</a>
+          <a href="#">KIDS</a>
           <div class="megamenu">
             <div class="megamenuitems">
               <h4><a href="#">NEW IN: CLOTHING</a></h4>
               <h4><a href="#">NEW IN: FOOTWEAR & ACCS</a></h4>
               <h4><a href="#">INNERWEAR & SLEEPWEAR</a></h4>
               <h4><a href="#">BOYS</a></h4>
-
-
-        <div class="container-nav" id="blur">
-    
-          <div class="logo"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="err1"></div>
-          <div>
-            <div id="nav-end">
-              <a id="loginregister"></a>
-              <a href="">Customer Care</a>
-              <a href="https://luxe.ajio.com/">Visit AJIOLUXE</a>
-            </div>
-            <nav id="nav-bar">
-
               <ul>
                 <li><a href="#">Denims & Trousers </a></li>
                 <li><a href="#">Joggers & Track Pants <button class="btn-blw">Trending</button></a></li>
                 <li><a href="#">Outerwear</a></li>
-                <li><a href="#">Shirts</a><button class="btn-pink">New</button></li>
+                <li><a href="#">Shirts</a></li>
                 <li><a href="#">Shorts & 3/4ths</a></li>
                 <li><a href="#">T-Shirts</a></li>
               </ul>
@@ -256,9 +282,13 @@
                 <li><a href="#">12 Years And Above</a></li>
               </ul>
             </div>  
+  
+   <!-- ---------------------------copy this part -------------------------------- -->
+   
    <div class="megamenuitems">
      <h4><a href="#">FEATURED</a></h4>
      <ul>
+       <!-- -->
        <li><a href="#">Denims Under 799</a></li>
        <li><a href="#">Shirts Under 599</a></li>
        <li><a href="#">T-Shirts Under 399</a></li>
@@ -268,7 +298,7 @@
       <h4><a href="#">GIRLS</a></h4>
       <ul>
         <li><a href="#">Dresses & Frocks</a></li>
-        <li><a href="#">Jeans & Jeggings</a><button class="btn-ylw">Hot</button></li>
+        <li><a href="#">Jeans & Jeggings</a></li>
         <li><a href="#">Leggings </a></li>
         <li><a href="#">Outerwear</a></li>
         <li><a href="#">Skirts & Shorts</a></li>
@@ -283,20 +313,24 @@
                 <li><a href="#">12 Years And Above</a></li>
               </ul>
     </div>  
+    <!-- ---------------------------copy this part -------------------------------- -->
+ 
     <div class="megamenuitems">
       <h4><a href="#">FEATURED</a></h4>
       <ul>
         <li><a href="#">Dresses Under 499</a></li>
         <li><a href="#">Tops Under 399</a></li>
        </ul>
+       <!-- PRECIOUS JEWELLERY  -->
        <h4><a href="#">BABY</a></h4>
        <ul> 
          <li><a href="#">SETS</a></li>
        </ul>
+       <!-- INNERWEAR BriefsTrunks & BoxersVests -->
        <h4><a href="#">TOYS AND BABYCARE</a></h4>
        <ul>
         
-         <li><a href="#">Action-Figurine & Collectibles <button class="btn-ylw">Hot</button></a></li>
+         <li><a href="#">Action-Figurine & Collectibles <button class="btn-blw">Hot</button></a></li>
          <li><a href="#">Creative & Educational Toys</a></li>       
          <li><a href="#">Gaming, Robots & Vehicles</a></li>       
          <li><a href="#">Infants Toys</a></li>       
@@ -307,7 +341,12 @@
        </ul>
        <h4><a href="#">COLLECTIONS</a></h4>
     <h4><a href="#">AJIO EXCLUSIVES</a></h4>
+    <h4><a href="#">FOOTWEAR & ACCESSORIES</a></h4>
+
      </div>  
+      
+      <!-- ---------------------------copy this part -------------------------------- -->
+      
    <div class="megamenuitems">
     <h4><a href="#">FEATURED BRANDS</a></h4>
     
@@ -327,10 +366,14 @@
       <li><a href="#">Lee Cooper</a></li>
      </ul>
     </li>
+    <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
    </ul>
+       <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
+
+             <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   INDIE section  -->
       <ul >   
         <li>
-          <a href="#" class="none">INDIE</a>
+          <a href="#">INDIE</a>
           <div class="megamenu">
             <div class="megamenuitems">
               <h4><a href="#">NEW IN: CLOTHING</a></h4>
@@ -349,16 +392,29 @@
                 <li><a href="#">Blouses & Blouse Fabrics</a></li>
                 <li><a href="#">Pants, Skirts & Palazzos</a></li>
               </ul>
+
+              <h4><a href="#">ACCESSORIES</a></h4>
+              <ul>
+                <li><a href="#">Bags & Belts</a></li>
+                <li><a href="#">Shawls & Wraps</a></li>
+                <li><a href="#">Stoles & Scarves</a></li>
+              </ul>
             </div>  
+  
+   <!-- ---------------------------copy this part -------------------------------- -->
+   
    <div class="megamenuitems">
      <h4><a href="#">HOME</a></h4>
      <ul>
+       <!-- -->
        <li><a href="#">Bedsheets</a></li>
        <li><a href="#">Cushions And Covers</a></li>
-       <li><a href="#">Curtains</a><button class="btn-blw">Trending</button></li>
+       <li><a href="#">Curtains</a></li>
        <li><a href="#">Table Linen</a></li>
        <li><a href="#">Rugs, Carpets & Dhurries</a></li>
       </ul>
+      
+      
       <h4><a href="#">WINTERWEAR</a></h4>
       <h4><a href="#">FOOTWEAR</a></h4>
       <ul>
@@ -367,6 +423,9 @@
        </ul>
 
     </div>  
+    <!-- ---------------------------copy this part -------------------------------- -->
+    
+    
     <div class="megamenuitems">
       <h4><a href="#">REGIONAL SPECIALITIES</a></h4>
       <ul>
@@ -375,7 +434,7 @@
         <li><a href="#">Bagru</a></li>
         <li><a href="#">Bagh</a></li>
         <li><a href="#">Banaras & Brocades</a></li>
-        <li><a href="#">Chanderi & Maheshwari</a><button class="btn-pink">New</button></li>
+        <li><a href="#">Chanderi & Maheshwari</a></li>
         <li><a href="#">Indigo</a></li>
         <li><a href="#">Ilkal & Khun</a></li>
         <li><a href="#">IKAT</a></li>
@@ -390,8 +449,14 @@
         <li><a href="#"> Pipar & Balotra</a></li>
         <li><a href="#">Shibori </a></li>
         <li><a href="#"> South Cotton</a></li>
+        <li><a href="#">South Silk</a></li>
+        <li><a href="#">Tant Tangail & Jamdani</a></li>
+
        </ul>
-     </div>   
+     </div>  
+      
+      <!-- ---------------------------copy this part -------------------------------- -->
+      
    <div class="megamenuitems">
     <h4><a href="#">FEATURED BRANDS</a></h4>
    
@@ -412,10 +477,14 @@
       <li><a href="#">AnuktaRangdeep</a></li>
      </ul>
     </li>
+    <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
    </ul>
+       <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
+
+                    <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG   Home and kitchen section  -->
       <ul >   
         <li>
-          <a href="#" class="none" >HOME AND KITCHEN</a>
+          <a href="#">HOME AND KITCHEN</a>
           <div class="megamenu">
             <div class="megamenuitems">
               
@@ -430,23 +499,52 @@
                 <li><a href="#">Dress Materials</a></li>
                 <li><a href="#">Quilt & Duvet Covers</a></li>
               </ul>
+            
+              <h4><a href="#">CUSHIONS & PILLOWS</a></h4>
+              <ul>
+                <li><a href="#">Cushions</a></li>
+                <li><a href="#">Pillows</a></li>
+                <li><a href="#"> Bed Wedges & Neck Pillows</a></li>
+                <li><a href="#"> Bolsters</a></li>
+                <li><a href="#">Cushion Covers</a></li>
+                <li><a href="#">Pillow Covers</a></li>
+              </ul>
+              <h4><a href="#">RUGS, CARPETS & MATS</a></h4>
+            </div>  
+  
+   <!-- ---------------------------copy this part -------------------------------- -->
+   
+   <div class="megamenuitems">
+     <h4><a href="#">CURTAIN & ACCESSORIES <button class="btn-ylw">HOT</button></a></h4>
+     <ul>
+       <!-- -->
+       <li><a href="#">Window Curtains</a></li>
+       <li><a href="#">Door Curtains</a></li>
+      
+      </ul>
+      <h4><a href="#">KITCHEN <BUTton class="btn">NEW</BUTton></a></h4>
+      <ul>
+        <li><a href="#">Cookware & Cutlery</a></li>
+        <li><a href="#">Bakeware</a></li>
+        <li><a href="#">Kitchen Tools</a></li>
+        <li><a href="#"> Kitchen Aprons, Gloves & Towel</a></li>
+        <li><a href="#">Kitchen Organisers</a></li>
+       </ul>
+       <h4><a href="#">DINNING <button class="btn">NEW</button></a></h4>
+       <ul>
+         
+         <li><a href="#">Serveware & Drinkware</a></li>
+         <li><a href="#">Table Linen Sets</a></li>
+         <li><a href="#">Table Covers & Runners</a></li>
+         <li><a href="#">Table Napkins</a></li>
+         <li><a href="#"> Placemats & Coasters</a></li>
+        </ul>
+        <h4><a href="#">STATIONERY & ORGANISERS</a></h4>
 
-              <div id="search-container">
-                <div class="search-tab">
-                  <input type="text" placeholder="Search AJIO">
-                  <img src="./pictures/search-m.jpg" alt="">
-                </div>
-              </div>
-              <div class="add-to-bag">
-                <div>
-                 <a href="wishlist.html"><img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt=""></a>
-                </div>
-                <div >
-                  <a href="cart.html"><img  src="./pictures/addto-bag.png" alt=""></a>
-                </div>
-                <!-- <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt=""> -->
-              </div>
 
+    </div>  
+    <!-- ---------------------------copy this part -------------------------------- -->
+   
     
     <div class="megamenuitems">
       <h4><a href="#">HOME DECOR <button class="btn-ylw">HOT</button></a></h4>
@@ -496,128 +594,207 @@
       <li><a href="#">Winter Carnival Upto 60</a></li>
       <li><a href="#">Kids Room Min 40</a></li>
       <li><a href="#">Heritage Of India</a></li>
+      
     </ul>
     </li>
+    <!-- <input style="width: 300px;margin-top: 20px;margin-bottom: 20px;" type="text" placeholder="enter"> -->
    </ul>
+       <!-- --------------------BIGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG -->
+       <!-- <div id="searchnav" style="border: 1px solid red;">
+        <input id="search"   type="text" placeholder="Search for a Product, Brand  or Category"> 
+        <button style="border: none;"  id="search-btn">
+        <img style="width: 20px;" src="./pictures/search.jpg" alt=""></button>
+      </div> -->
       <div id="search-container">
         <div class="search-tab">
-          <input id="search-inp" type="text" placeholder="Search AJIO">
-
-          <button id="search-button" style="border: none;"><a href="#"><img style="border: none;" src="./pictures/search-m.jpg" alt=""></a></button>
-
+          <input type="text" placeholder="Search AJIO">
+          <button><img src="./pictures/search.jpg" alt=""></button>
         </div>
-       
+
       </div>
       <div class="add-to-bag">
-        <div>
-          <a href="./wishlist.html"><img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt=""></a>
-        </div>
-        <div >
-          <a href="./cart.html"><img style=" width: 35px;" src="./pictures/addto-bag.png" alt="" ></a>
-
-        </div>
+        <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt="">
+         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt="">
       </div>
          
         </div>
       </nav>
-
-      <div class="mobile-nav-btn" >
-        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-      </div>
-
     </div>
   </header>
-    <div id="bar">
-        <a href="">Home</a>/<a href="">Men</a>/<a href="">Western Wear</a>/<a href="">Shirts</a>/<a href="">Checked Slim Fit Shirts</a>
+  <!-----------------------------------------------HEARDER END  ########################################## -->
+  <!-- <div style="margin-top: 1000px;"></div> -->
+  <!-- <div id="slider-1"></div> -->
+
+  <!--Image slider 1 start-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-ClearanceSale.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/UHP-D-clearance-flat70.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-MainBanner-P3-FootwearCarnival-RedTapeFila-Flat60.jpg
+            " class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-MainBanner-P4-Casuals-CampusSutraVeroModa-Min60Extra30.jpg
+            " class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-MainBanner-P5-GantSuperdryClarks-Min50Extra35.jpg"
+          class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img
+          src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-MainBanner-P6-Sunglasses-LoveMoschinoGuess-Upto80.jpg"
+          class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-MainBanner-P7-ArrowUSPA-Upto50.jpg"
+          class="d-block w-100" alt="..." />
+      </div>
     </div>
-    <div class="cont">
-         <div class="main"> 
-            <div id="photo">
-                <img id="imj"  alt="">
-
-                <p><i>Our model wears a Size Medium</i></p>
-                <a href="#">RETURN</a>
-                <a href="#">OUR PROMISE</a>
-        
-            </div>
-            <div class="m">
-                <div id="pricing">
-                    <h2 id="category">mens</h2>
-                    <h1 id="name">nike shirt</h1>
-                    <p id="prc">1800</p>
-                    <p id="p">Price inclusive of all taxes</p>
-                    <div id="offer">
-                        <div>
-                            <p>Cashback <br>discount</p> <a href="#">T&C</a>
-                        </div>
-                        <p>Get upto Rs 500 Mobikwik Cashback <br> on a minimum transaction value of Rs <br> 1500 using Mobikwik, minimum <br> assured cashback of Rs 50</p>
-                    </div>
-                    <a id="of" href="#">+4 More</a><br>
-                    <p id="color">Blue</p>
-                    <p id="sz">Select Size</p>
-                    <div id="sizes">
-                        <span>S</span>
-                        <span>M</span>
-                        <span>L</span>
-                        <span>XL</span>
-                        <span>XXL</span>
-                    </div>
-                    <div id="location">
-                      <p>Select your size to know your estimated delivery <br> date.</p>
-                    </div>
-                    <div id="bt">
-
-                      <button id="bag">Add To Bag</button>
-                      <p>HANDPICKED STYLES | ASSURED QUALITY</p>
-                      <button id="wishlist">Save To Wishlist</button>
-
-                    </div>
-                    <div class="dtl">
-                        <h3>Product Details</h3>
-                        <h2>
-                            <ul>
-                                <li>Slim Fit</li> 
-                                <li>Package contains: 1 item </li>
-                                <li>Washable</li>
-                                
-                                <li>Product Code: 469241808001</li>
-                                <li><a href="#">About Product</a></li>
-                                <a href="#">Other information ˅ </a>
-                            </ul>
-                        </h2>
-                   </div>
-                </div>
-            </div>
-        </div>
-            <div id="l" >
-                <hr class="hr-text" data-content="Shop More">
-                <div class="more">
-                    <div>
-                        <a href="product.html"><img src="https://assets.ajio.com/medias/sys_master/root/20221129/A696/6385c425f997ddfdbda3e322/shoetopia_beige_almond-toe_slingback_mules.jpg"alt=""></a>
-                    </div>
-                    <div>
-                      <a href="product.html"><img src="https://assets.ajio.com/medias/sys_master/root/20230122/bBXM/63cc4b8af997dd708e192c25/gorgone_turquoise_printed_saree_with_tassel_accent.jpg"alt=""></a>
-                    </div>
-                    <div>
-                      <a href="product.html"><img src="https://assets.ajio.com/medias/sys_master/root/20230113/KFbr/63c17458aeb269c651dfea61/spykar_navy_blue_lightly_washed_skinny_fit_jeans.jpg"alt=""></a>
-                    </div>
-                    <div>
-                      <a href="product.html"><img src="https://assets.ajio.com/medias/sys_master/root/20220513/AhGv/627e22c9f997dd03e2b9a400/the_bear_house_maroon_checked_slim_fit_shirt_with_patch_pocket.jpg"alt=""></a>
-                    </div>
-                </div>
-            </div>
-       <div id="lower">
-         <img  src="./Screenshot_20230224_100543.png" alt="">
-       </div>
-       
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- *****************************slider 1 end************************************* -->
+  <div id="image-after-slider" class="hower">
+    <div>
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D1-1440x90-11.jpg" alt="">
     </div>
-   <script src="detail.js"></script>
-   <footer>
+    <div>
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/IDBI-1440x128-23.jpg" alt="">
+    </div>
+    <div>
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SpecieUpYourBrandGame-SectionheaderStrip.jpg" alt="">
+    </div>
+  </div>
+  <!---------------------2N SLIDER------------- -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators" >
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" data-interval="1000">
+      <div class="carousel-item active">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-TopBanner-P1-Sunglasses-LoveMoschinoISIF-Min60.jpg" class="d-block w-100" alt="1">
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-TopBanner-P2-MensActivewear-NikeAdidas-3050.jpg" class="d-block w-100" alt="2">
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-TopBanner-P3-ComfortableInnerwearLoungewear-CloviaZivame-Starting199.jpg" class="d-block w-100" alt="3">
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-TopBanner-P4-trends-under499.jpg
+        " class="d-block w-100" alt="4">
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-TopBanner-P5-Activewear-PumaPerformax-Min50.jpg
+        " class="d-block w-100" alt="5">
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-TopBanner-P6-TrendsFootprings-HiAttitudePerformax-Starting149.jpg
+        " class="d-block w-100" alt="6">
+      </div>
+      <div class="carousel-item" data-interval="1000">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21022023-UHP-D-TopBanner-P7-Kids-KBTSKFFrendz-Min50.jpg" class="d-block w-100" alt="7">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!---------------------2N SLIDER end------------- -->
+  <!-------------------------Image below 2nd slider --------------------------------- -->
+  <div id="h">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/Mobikwik-1440x128-23.jpg" alt="">
+  </div>
+  <div>
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-Sectionheader.jpg" alt="">
+   </div>
+   <!------------------------------- 3-images under ur world of REWARDS -------------------------------->
+   <div id="three-images">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-EarnUpto5.jpg" alt="">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-Relianceone.jpg" alt="">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Rewards-inviteFriends.jpg" alt="">
+   </div>
+   <!----------------------------------In trend img ------------------------------------------>
+   <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SponsorBrands-SectionHeader.jpg" alt="">
+
+   <!---------------------------------After in trend 4 images -------------------------------->
+   <div class="images-148">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SponsorBrands-P1-Puma-4060.jpg" alt="">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SponsorBrands-P2-Levis-Flat50Extra10.jpg" alt="">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SponsorBrands-P3-Adidas-4060.jpg" alt="">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-SponsorBrands-P4-Campus-Upto60.jpg" alt="">
+   </div>
+   <div>
+    <!-- <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-FlashDealsHeaderStrip.jpg" alt=""> -->
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-Sectionheader.jpg" alt="">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-AJIOGOLD.jpg" alt="">
+   </div>
+<!--------------------Use display grid -->
+<div class="circle-image-grid">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P1-Westenrwear.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P2-Trends.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P3-Sneakerhood.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/47.4_1.jpg" alt="">
+
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/47.4_1.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P6-Footwear.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P7-Accessories.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P8-Wedding.jpg" alt="">
+
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P9-Sarees.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P10-Homegrownbrands.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P11-Indie.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P12-Home.jpg" alt="">
+
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P13-Watches.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P14-Innerwearmen.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P15-Jewellery.jpg" alt="">
+  <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-OnlineStores-P16-Lingerie.jpg" alt="">
+</div>
+<div class="white-image">
+  <img src="./pictures/white-image.png" alt="">
+</div>
+
+
+
+
+
+
+   <div>
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/Discover%20Online%20Stnkores%20(D).jpg" alt="">
+    <img src="https://assets.ajio.com/cms/AJIO/WEB/13102020-D-unisex-ajiocares-strip.jpg" alt="">
+    <img src="./pictures/above-footer.png" alt="">
+   </div>
+   <!---------------------------------Footer start----------------------------------------------- -->
+  <footer>
     <div class="footer">
       <div class="ajio-list">
           <div class="heading">Ajio</div>
-          <div class="list display-none">
+          <div class="list">
               <a href="">Who we are</a>
               <a href="">Join our team</a>
               <a href="">Terms & conditions</a>
@@ -629,7 +806,7 @@
       </div>
       <div class="ajio-list">
           <div class="heading">Help</div>
-          <div class="list display-none" >
+          <div class="list">
               <a href="">Track your order</a>
               <a href="">Frequently Asked Questions</a>
               <a href="">Returns</a>
@@ -639,9 +816,9 @@
               <a href="">How Do I Redeem My Coupon</a>
           </div>
       </div>
-      <div class="ajio-list ">
+      <div class="ajio-list">
           <div class="heading">Shop By</div>
-          <div class="list display-none">
+          <div class="list">
               <a href="">Men</a>
               <a href="">Women</a>
               <a href="">Kids</a>
@@ -655,7 +832,7 @@
       </div>
       <div class="ajio-list">
           <div class="heading">Follow Us</div>
-          <div class="list display-none">
+          <div class="list">
               <a href="">Facebook</a>
               <a href="">Instagram</a>
               <a href="">Terms & conditions</a>
@@ -665,12 +842,12 @@
         </div>
       </div>
       <div id="line"></div>
-      <div class="none-dis">
+      <div>
         <a href="#">Payment Methods</a>
         <a href="#">Secure Systems</a>
         
       </div>
-      <div class="last display-none">
+      <div class="last">
           <div><img src="./pictures/netbanking.jpg" alt=""></div>
           <div><img src="./pictures/visa.jpg" alt=""></div>
           <div><img src="./pictures/mastercard.jpg" alt=""></div>
@@ -679,5 +856,29 @@
       </div>
      
   </footer>
+
+
+
+
 </body>
+ 
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script src="./index.js" ></script> -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>

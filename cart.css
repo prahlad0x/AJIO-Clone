@@ -21,6 +21,7 @@
 }
 
 #shop{
+
   display: inline-block;
   text-transform: uppercase;
   color: #fff!important;
@@ -36,6 +37,7 @@
   padding: 0 20px;
   border-color: #d5a249;
 }
+
 
 .shop-btn{
   text-align: center;
@@ -81,6 +83,7 @@ background-color: #fafafa;
 margin-bottom: 20px;
 }
 
+
 #total{
 margin-left: 100px;
 }
@@ -102,6 +105,7 @@ background-color: hsl(38, 100%, 74%);
   border-color: #d5a249;
   margin-top: 20px;
 }
+
 /* <!-----------------------------------------------HEARDER END  ########################################## --> */
 
 
@@ -266,6 +270,7 @@ nav>ul>li:hover .megamenu{
   border: none;
 }
 .btn-blw{
+
   font-size: 10px;
   background-color: skyblue;
   color: white;
@@ -286,6 +291,7 @@ nav>ul>li:hover .megamenu{
   border-radius: 20px;
   background-color: #FFFDED ;
   margin-right: 10px;
+
 }
 .search-tab img{
   width: 20px;
@@ -462,6 +468,7 @@ padding: 5px ;
 
 #proceed{
   
+
   color: #fff;
   background-color: #d4a048;
   font-family: SourceSansProSemiBold;
@@ -555,3 +562,4 @@ margin-left: 10px;
   box-shadow: none;
 }
 }
+

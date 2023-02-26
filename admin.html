@@ -447,12 +447,14 @@
     //getting all order
     let orders = JSON.parse(localStorage.getItem('orders'))||[]
 
+
     //orders count 
     let totalorders = document.getElementById('ordreTotal')
     totalorders.innerText = orders.length
 
     //total income 
     let total_income = document.getElementById('incomeTotal')
+
 
     // add Product
     let addProductTitleInp = document.getElementById('addProductTitle');
@@ -553,6 +555,8 @@
         }
         if(detail == 'Orders'){
             main_container.innerHTML = `<h1>Orders btao bhai ko...</h1>`
+
+
             getOrders();
         }
         if(detail == 'Employees'){
@@ -614,6 +618,7 @@
 
     function getUsers(){
         main_container.innerHTML = ''
+
         let html = `${userdata.map((ele)=>{
             return getUsersCard(ele);
         }).join("")}`
@@ -654,7 +659,7 @@
     function getemployeecard(item){
         let card = `<div class='card'>
             <div class="image">
-                <img src="./pictures/avatar2.jpeg" alt="image">
+                <img src="${item.image}" alt="image">
             </div>
             <div>
                 <p> id : ${item.id}</p>
@@ -686,13 +691,15 @@
     function getUsersCard(item){
         let card = `<div class='card'>
             <div class="image">
-                <img src="./pictures/avatar1.jpeg" alt="image">
+                <img src="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50426.jpg?size=338&ext=jpg" alt="image">
             </div>
             <div>
                 <p> UserName : ${item.userName}</p>
+
                 <p> Name : ${item.name} </p>
                 <p> Email : ${item.email}   ||    Contact : ${item.mobile}</p>
                 <p> City : ${item.location}</p>
+
             </div></div>`
         return card;
     }
@@ -769,6 +776,7 @@
         showNotification('Product Deleted Successfully')
     }
     
+
     function orderscard(item){
         let card = `<div id="ProductCardMAIN">
                     <div class="productcard">
@@ -793,7 +801,9 @@
         main_container.innerHTML = html;
     }
    
+
    AllEmployeesCount();
    total()
+
 </script>
 </html>

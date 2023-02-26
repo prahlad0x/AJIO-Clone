@@ -567,6 +567,7 @@
                 <div class="search-tab">
                   <input type="text" placeholder="Search AJIO">
                   <img src="./pictures/search-m.jpg" alt="">
+
                 </div>
               </div>
               <div class="add-to-bag">
@@ -576,6 +577,7 @@
                 <div>
               <img id="bag-png" src="./pictures/addto-bag.png" alt="">
                 </div>
+
                 <!-- <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt=""> -->
               </div>
     
@@ -681,6 +683,7 @@
     let add=document.getElementById("add-products")
     let productCont=document.getElementById("product-cont")
 
+
     let bagproduct=JSON.parse(localStorage.getItem("bagproduct")) || []
     // console.log(bagproduct)
 
@@ -712,7 +715,9 @@
 
 
     // function fun(){
-        
+
+        let wishData=JSON.parse(localStorage.getItem("wishproduct")) || []
+
 
    
     
@@ -732,14 +737,18 @@
                 break;
             }
         }
+
     }
     displayData(data)
     }
+
     // }
     // fun()
     
     function displayData(data){
+
         // let wishData=JSON.parse(localStorage.getItem("wishproduct")) || []
+
         productCont.innerHTML=""
         wish.innerHTML=""
         add.innerHTML=""
@@ -771,9 +780,11 @@
             addTobag.addEventListener("click", ()=>{
                 
                 alert("Item has been added to Bag")
+
                 bagproduct.push(el.id)
                 addTobag.innerText="Item Added To Bag"
                 localStorage.setItem("bagproduct", JSON.stringify(bagproduct))
+
                 wishData.splice(ind,1)
                 localStorage.setItem("wishproduct", JSON.stringify(wishData))
                 location.href="wishlist.html"

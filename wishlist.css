@@ -1,3 +1,4 @@
+
 .heading{
   /* border: 2px solid blue; */
   text-align: center;
@@ -35,9 +36,11 @@
 }
 
 .btn{
+
   width:200px;
   margin:auto;
   /* border:2px solid yellow */
+
 }
 
 .btn button{
@@ -58,6 +61,7 @@
 }
 
 .images{
+
   display: flex;
   /* border:2px solid teal; */
   justify-content: space-around;
@@ -68,6 +72,7 @@
 .images img{
 width:80%
 }
+
 
 @media screen and (max-width:800px){
 .images img{
@@ -453,4 +458,6 @@ font-weight:200;
   #product-cont{
     grid-template-columns: repeat(1,1fr);
   }
+
 }
+
