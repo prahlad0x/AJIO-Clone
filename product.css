@@ -181,6 +181,7 @@ body{
 #filter{
     padding: 5px 10px;
     border-radius: 4px;
+
 }
 
 @media screen and (min-width: 800px) and (max-width:1060px) {
@@ -206,4 +207,5 @@ body{
     .grid{
      display: none;
     }
+
 }

@@ -135,6 +135,7 @@
     let loginPage = document.querySelector('.login')
     let RegisterPage = document.querySelector('.register')
 
+
     //userdata
     let Userdata = JSON.parse(localStorage.getItem('userdata')) || []
 
@@ -164,12 +165,20 @@
         RegisterPage.style.display='grid'
     }
 
+    let login = document.querySelector('.login form')
+
     login.addEventListener('submit', (e)=>{
         e.preventDefault();
         if(loginUsernameInp.value == "admin"  && loginPassInp.value == 'admin'){
         location.href = './admin.html'
         }
         else{
+
+           window.location.href ='./index.html'
+        }
+    })
+
+
             let flag = true;
             for(let i=0;i<Userdata.length; i++){
                 if(Userdata[i].userName == loginUsernameInp.value  && loginPassInp.value == Userdata[i].password){
@@ -230,6 +239,7 @@
     function showNotification(message){
         alert(message)
     }
+
 
 </script>
 </html>
