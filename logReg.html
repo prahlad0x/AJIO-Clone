@@ -165,7 +165,6 @@
         RegisterPage.style.display='grid'
     }
 
-    let login = document.querySelector('.login form')
 
     login.addEventListener('submit', (e)=>{
         e.preventDefault();
@@ -192,9 +191,7 @@
                     showNotification('Username does not exists')
                 }
             }
-        }
-    })
-
+        
     register.addEventListener('submit', (e)=>{
         e.preventDefault()
         let userName = registerUserNameInp.value;
