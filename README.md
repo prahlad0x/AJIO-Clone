@@ -16,11 +16,11 @@ especially for Clothes , shoes,It's clone of [AJIO](https://www.reliancedigital.
 
 
 ## Team Member
-[Pralhad Kushawh(Team Leader)](https://github.com/rutwik-kumbhar)   
-[prashant ](https://github.com/Krishu7827)       
-[Gaurav Asode](https://github.com/Yogita2021)  
-[Anurag Kushwah](https://github.com/starboy1010)   
-[Krishna ](https://github.com/shivpatil370)
+[Pralhad Kushawh(Team Leader)] 
+[prashant Som]      
+[Gaurav Asode] 
+[Anurag Kushwah]   
+[Krishna ]
 
 ## 🛠 Tools
 1. Javascript
@@ -38,7 +38,7 @@ especially for Clothes , shoes,It's clone of [AJIO](https://www.reliancedigital.
 6. Payment Page
 
 ## 👩‍🚒Role in the website 
-1. Prashant(Home Page)
+1. Prashant Som(Home Page)
 2. Gaurav Asode(Product Page)
 3. Krishna (Cart Page)
 4. Anurag kushwah(Payment Page)
