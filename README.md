@@ -49,7 +49,7 @@ especially for Clothes , shoes,It's clone of [AJIO](https://www.reliancedigital.
 ## FAQ 
 
 #### is it responsing or not ??
-Yes, It's totally responsive
+No, its not fully responsive
 
 
 
