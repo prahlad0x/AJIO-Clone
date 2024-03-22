@@ -114,7 +114,10 @@
     let btn = document.getElementById('ddd')
     btn.setAttribute('value',`Proceed To Pay ${totalPrice}`) 
     console.log(btn)
-
+ btn.addEventListener('click', (e) => {
+    alert("Order Placed Successfully"); 
+    window.location.href = './index.html';
+});
     let form = document.querySelector('form')
     form.addEventListener('submit',(e)=>{
         e.preventDefault()
